@@ -37,11 +37,23 @@ public class MainWindow extends javax.swing.JFrame{
     private JPanel buttonsPanel;
 
     /**
+     *
+     */
+    private JScrollPane scrollableRecordArea;
+
+    /**
+     * The Text area used to display the student records.
+     */
+    private JTextArea studentRecordArea;
+
+    /**
      * A constructor for the main window. generates all the buttons and panels, then adds them into a frame.
      */
     public MainWindow(){
         super("Main Window");
         super.setVisible(true);
+        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         setSize(600,600);
 
         insertButton = new JButton("Insert");
@@ -54,11 +66,16 @@ public class MainWindow extends javax.swing.JFrame{
         topLabel.setVerticalAlignment(SwingConstants.CENTER);
         topLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
+        studentRecordArea = new JTextArea();
+        studentRecordArea.setEditable(false);
+        scrollableRecordArea = new JScrollPane(studentRecordArea);
+
         add("North", topLabel);
+
+        add("Center", scrollableRecordArea);
 
         generateButtonsPanel();
         add("South", buttonsPanel);
-        
     }
 
     /**
