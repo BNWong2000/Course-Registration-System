@@ -36,7 +36,9 @@ public class MainWindow extends javax.swing.JFrame{
      */
     private JPanel buttonsPanel;
 
-
+    /**
+     * A constructor for the main window. generates all the buttons and panels, then adds them into a frame.
+     */
     public MainWindow(){
         super("Main Window");
         super.setVisible(true);
@@ -51,14 +53,18 @@ public class MainWindow extends javax.swing.JFrame{
         JLabel topLabel = new JLabel("An Application to maintain Student Records");
         topLabel.setVerticalAlignment(SwingConstants.CENTER);
         topLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
         add("North", topLabel);
 
         generateButtonsPanel();
         add("South", buttonsPanel);
-
-
+        
     }
 
+    /**
+     * A helper function for the constructor.
+     * This adds all the buttons the the buttonPanel.
+     */
     private void generateButtonsPanel(){
         buttonsPanel = new JPanel();
         buttonsPanel.add(insertButton);
