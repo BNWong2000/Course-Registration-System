@@ -32,7 +32,20 @@
       <recent name="Client.Model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ClientRegistrationApp">
+    <configuration name="ClientRegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.ClientRegistrationApp" />
+      <module name="ENSF409-Term-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.Model.RegistrationApp" />
       <module name="ENSF409-Term-Project" />
@@ -48,6 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClientRegistrationApp" />
         <item itemvalue="Application.RegistrationApp" />
       </list>
     </recent_temporary>
@@ -74,21 +88,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586724552193" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586730467109">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586731454407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586730467109" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586730467109">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586731454407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586731454407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586730467109" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586730467108">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586731454407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586731454407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586730467108" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586730467109">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586731454407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586731454407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586730467109" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586731454407" />
   </component>
 </project>

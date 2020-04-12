@@ -22,6 +22,11 @@ public class MainController {
         this.searchView = searchView;
         this.viewStuView = viewStuView;
         this.viewCatView = viewCatView;
+        mainView.addEnrollListener(new EnrollListener());
+        mainView.addRemoveListener(new RemoveListener());
+        mainView.addSearchListener(new SearchListener());
+        mainView.addViewCatListener(new ViewCatListener());
+        mainView.addViewStuListener(new ViewStuListener());
 
     }
 

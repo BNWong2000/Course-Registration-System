@@ -19,6 +19,7 @@ public class SearchView extends JFrame {
 
     public SearchView(){
         super();
+        setSize(250,150);
 
         setLayout(new BorderLayout());
 

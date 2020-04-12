@@ -21,7 +21,7 @@ public class MainView extends JFrame{
 
     public MainView(){
         super();
-        setSize(400,400);
+        setSize(800,800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
