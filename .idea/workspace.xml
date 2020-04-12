@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
