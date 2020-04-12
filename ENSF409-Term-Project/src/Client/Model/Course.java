@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Course implements Serializable {
-
+	private static final long serialVersionUID=1L;
 	private String courseName;
 	private int courseNum;
 	private ArrayList<Course> preReq;

@@ -3,10 +3,11 @@ package Client.Model;
 import Client.Model.CourseOffering;
 import Client.Model.Registration;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Student {
-	
+public class Student implements Serializable {
+	private static final long serialVersionUID=2L;
 	private String studentName;
 	private int studentId;
 	private ArrayList<CourseOffering> offeringList;
