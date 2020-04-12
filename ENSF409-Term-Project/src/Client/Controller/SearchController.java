@@ -26,7 +26,7 @@ public class SearchController {
             for (String s : fields) {
                 if (s.equals("")) {
                     searchView.sendDialogueMessage("One or more of the fields is empty");
-                    return
+                    return;
                 }
             }
 

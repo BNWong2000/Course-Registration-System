@@ -47,11 +47,11 @@
       </method>
     </configuration>
     <configuration name="RegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server.Model.RegistrationApp" />
+      <option name="MAIN_CLASS_NAME" value="Server.RegistrationApp" />
       <module name="ENSF409-Term-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Server.Model.*" />
+          <option name="PATTERN" value="Server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
