@@ -2,6 +2,8 @@ package Client.View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SearchView extends JFrame {
     private JLabel title;
@@ -36,10 +38,33 @@ public class SearchView extends JFrame {
         centerPanel.add(courseName);
         centerPanel.add(nameField);
         centerPanel.add(courseNum);
-        centerPanel.add()
+        centerPanel.add(numField);
+        southPanel.add(search);
+        southPanel.add(cancel);
 
+        getContentPane().add(BorderLayout.NORTH, northPanel);
+        getContentPane().add(BorderLayout.CENTER, centerPanel);
+        getContentPane().add(BorderLayout.SOUTH, southPanel);
+    }
 
+    public void clearTextFields(){
+        nameField.setText("");
+        numField.setText("");
+    }
 
+    public ArrayList<String> getFields(){
+        ArrayList<String> courseInfo = new ArrayList<>();
+        courseInfo.add(nameField.getText());
+        courseInfo.add(numField.getText());
+        return courseInfo;
+    }
+
+    public void addSearchListener(ActionListener a){
+        search.addActionListener(a);
+    }
+
+    public void addCancelListener(ActionListener a){
+        cancel.addActionListener(a);
     }
 
 
