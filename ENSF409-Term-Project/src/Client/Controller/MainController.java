@@ -14,6 +14,17 @@ public class MainController {
     private ViewStuView viewStuView;
     private ViewCatView viewCatView;
 
+    public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView, ViewStuView viewStuView, ViewCatView viewCatView){
+
+        this.mainView = mainView;
+        this.enrollView = enrollView;
+        this.removeView = removeView;
+        this.searchView = searchView;
+        this.viewStuView = viewStuView;
+        this.viewCatView = viewCatView;
+
+    }
+
 
     public class EnrollListener implements ActionListener{
         @Override

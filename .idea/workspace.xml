@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,5 +47,11 @@
       <updated>1586727894226</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="481" y="239" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586730149502">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="481" y="239" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1500.960@0.0.1500.960" timestamp="1586730149502" />
   </component>
 </project>
