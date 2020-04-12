@@ -1,4 +1,6 @@
 package Client.View;
 
-public class RemoveView {
+import javax.swing.*;
+
+public class RemoveView extends JFrame {
 }

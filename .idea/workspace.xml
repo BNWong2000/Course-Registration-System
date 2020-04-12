@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ENSF409-Term-Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/EnrollView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/EnrollView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/RemoveView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/RemoveView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/SearchView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/SearchView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/ViewCatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/ViewCatView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/ViewStuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/ViewStuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

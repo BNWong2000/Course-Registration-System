@@ -1,4 +1,6 @@
 package Client.View;
 
-public class ViewCatView {
+import javax.swing.*;
+
+public class ViewCatView extends JFrame {
 }
