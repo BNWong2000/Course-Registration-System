@@ -26,11 +26,10 @@ public class SearchController {
             for (String s : fields) {
                 if (s.equals("")) {
                     searchView.sendDialogueMessage("One or more of the fields is empty");
-                    return;
+                    return
                 }
             }
 
-            
 
         }
         //
@@ -39,7 +38,7 @@ public class SearchController {
     public class CancelListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            searchView.clearTextFields();
+            //searchView.clearTextFields();
             searchView.setVisible(false);
 
         }
