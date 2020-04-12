@@ -1,7 +1,7 @@
 package Client.Controller;
 
-
-
+import Client.Model.Course;
+import Client.Model.Student;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -34,8 +34,8 @@ public class Communication {
         Object incomingObject = null;
 
         try{
-            socketOut.writeObject(object);
             socketOut.writeObject(label);
+            socketOut.writeObject(object);
             socketOut.flush();
             incomingObject = socketIn.readObject();
 
@@ -46,4 +46,24 @@ public class Communication {
         }
         return incomingObject;
     }
+
+    public Object communicate(Student student, Course course, String label){
+
+        Object incomingObject = null;
+
+        try{
+            socketOut.writeObject(label);
+            socketOut.writeObject(student);
+            socketOut.writeObject(course);
+            socketOut.flush();
+            incomingObject = socketIn.readObject();
+
+        } catch (IOException e) {
+            // do something else
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return incomingObject;
+    }
+
 }
