@@ -11,6 +11,7 @@ public class SearchController {
     private SearchView searchView;
     private Communication communication;
 
+
     public SearchController(SearchView searchView, Communication communication){
         this.searchView = searchView;
         searchView.addSearchListener(new SearchListener());
@@ -23,7 +24,7 @@ public class SearchController {
         @Override
 
         public void actionPerformed(ActionEvent e) {
-            // List to contain the id, faculty, major, and year
+
             ArrayList<String> fields = new ArrayList<String>(searchView.getFields());
             // check if any of the fields are empty
             for (String s : fields) {
