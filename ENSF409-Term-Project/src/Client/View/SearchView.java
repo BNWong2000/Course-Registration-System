@@ -1,4 +1,6 @@
 package Client.View;
 
-public class SearchView {
+import javax.swing.*;
+
+public class SearchView extends JFrame {
 }

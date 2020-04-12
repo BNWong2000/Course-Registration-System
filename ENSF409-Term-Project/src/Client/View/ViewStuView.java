@@ -1,4 +1,7 @@
 package Client.View;
 
-public class ViewStuView {
+import javax.swing.*;
+
+public class ViewStuView extends JFrame {
+
 }

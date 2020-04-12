@@ -45,6 +45,10 @@ public class MainView extends JFrame{
         southPanel.add(search);
         southPanel.add(viewStu);
         southPanel.add(viewCat);
+
+        getContentPane().add(BorderLayout.NORTH, northPanel);
+        getContentPane().add(BorderLayout.CENTER, centerPane);
+        getContentPane().add(BorderLayout.SOUTH, southPanel);
     }
 
     public void addEnrollListener(ActionListener a){

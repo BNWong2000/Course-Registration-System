@@ -1,4 +1,6 @@
 package Client.View;
 
-public class EnrollView {
+import javax.swing.*;
+
+public class EnrollView extends JFrame {
 }
