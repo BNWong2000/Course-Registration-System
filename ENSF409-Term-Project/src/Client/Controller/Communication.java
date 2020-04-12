@@ -16,6 +16,7 @@ public class Communication {
     private ObjectOutputStream socketOut;
 
 
+
     public Communication(String serverName, int portNumber) {
         try {
             aSocket = new Socket(serverName, portNumber);
