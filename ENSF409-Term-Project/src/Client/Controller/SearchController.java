@@ -10,7 +10,7 @@ public class SearchController {
 
     private SearchView searchView;
 
-    SearchController(SearchView searchView){
+    public SearchController(SearchView searchView){
         this.searchView = searchView;
         searchView.addSearchListener(new SearchListener());
         searchView.addCancelListener(new CancelListener());
