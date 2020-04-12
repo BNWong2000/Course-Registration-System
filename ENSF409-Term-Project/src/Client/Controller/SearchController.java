@@ -9,11 +9,14 @@ import java.util.ArrayList;
 public class SearchController {
 
     private SearchView searchView;
+    private Communication communication;
 
-    public SearchController(SearchView searchView){
+    public SearchController(SearchView searchView, Communication communication){
         this.searchView = searchView;
         searchView.addSearchListener(new SearchListener());
         searchView.addCancelListener(new CancelListener());
+        this.communication = communication;
+
     }
 
     public class SearchListener implements ActionListener {
@@ -26,9 +29,12 @@ public class SearchController {
             for (String s : fields) {
                 if (s.equals("")) {
                     searchView.sendDialogueMessage("One or more of the fields is empty");
-                    return
+                    return;
                 }
             }
+
+
+
 
 
         }

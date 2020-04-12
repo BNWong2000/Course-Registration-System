@@ -11,8 +11,9 @@ public class ClientRegistrationApp {
         ViewCatView viewCatView = new ViewCatView();
         ViewStuView viewStuView = new ViewStuView();
         MainView mainView = new MainView();
+        Communication communicate =  new Communication("localhost", 8099);
         MainController mainController = new MainController(mainView, enrollView, removeView, searchView, viewStuView, viewCatView);
-        SearchController searchController = new SearchController(searchView);
+        SearchController searchController = new SearchController(searchView, communicate);
         mainView.setVisible(true);
     }
 }
