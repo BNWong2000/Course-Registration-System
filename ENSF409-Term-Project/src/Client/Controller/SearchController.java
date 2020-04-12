@@ -12,6 +12,8 @@ public class SearchController {
 
     SearchController(SearchView searchView){
         this.searchView = searchView;
+        searchView.addSearchListener(new SearchListener());
+        searchView.addCancelListener(new CancelListener());
     }
 
     public class SearchListener implements ActionListener {
@@ -29,7 +31,6 @@ public class SearchController {
             }
 
             
-
 
         }
         //
