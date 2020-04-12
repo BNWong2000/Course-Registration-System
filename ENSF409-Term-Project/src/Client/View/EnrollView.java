@@ -4,4 +4,12 @@ import javax.swing.*;
 
 public class EnrollView extends JFrame {
     //private
+
+    /**
+     * Display the given message to the user.
+     * @param message the message to be displayed.
+     */
+    public void sendDialogueMessage(String message) {
+        JOptionPane.showMessageDialog(this, message);
+    }
 }

@@ -59,6 +59,14 @@ public class SearchView extends JFrame {
         return courseInfo;
     }
 
+    /**
+     * Display the given message to the user.
+     * @param message the message to be displayed.
+     */
+    public void sendDialogueMessage(String message) {
+        JOptionPane.showMessageDialog(this, message);
+    }
+
     public void addSearchListener(ActionListener a){
         search.addActionListener(a);
     }
