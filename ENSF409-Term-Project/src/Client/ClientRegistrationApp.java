@@ -1,6 +1,6 @@
 package Client;
 
-import Client.Controller.MainController;
+import Client.Controller.*;
 import Client.View.*;
 
 public class ClientRegistrationApp {
@@ -12,6 +12,7 @@ public class ClientRegistrationApp {
         ViewStuView viewStuView = new ViewStuView();
         MainView mainView = new MainView();
         MainController mainController = new MainController(mainView, enrollView, removeView, searchView, viewStuView, viewCatView);
+        SearchController searchController = new SearchController(searchView);
         mainView.setVisible(true);
     }
 }

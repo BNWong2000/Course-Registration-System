@@ -10,7 +10,7 @@ public class SearchController {
 
     private SearchView searchView;
 
-    SearchController(SearchView searchView){
+    public SearchController(SearchView searchView){
         this.searchView = searchView;
         searchView.addSearchListener(new SearchListener());
         searchView.addCancelListener(new CancelListener());
@@ -26,11 +26,10 @@ public class SearchController {
             for (String s : fields) {
                 if (s.equals("")) {
                     searchView.sendDialogueMessage("One or more of the fields is empty");
-                    return;
+                    return
                 }
             }
 
-            
 
         }
         //
@@ -39,7 +38,7 @@ public class SearchController {
     public class CancelListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            searchView.clearTextFields();
+            //searchView.clearTextFields();
             searchView.setVisible(false);
 
         }
