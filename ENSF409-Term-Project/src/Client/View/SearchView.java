@@ -33,6 +33,10 @@ public class SearchView extends JFrame {
         numField = new JTextField(5);
 
         northPanel.add(title);
+        centerPanel.add(courseName);
+        centerPanel.add(nameField);
+        centerPanel.add(courseNum);
+        centerPanel.add()
 
 
 
