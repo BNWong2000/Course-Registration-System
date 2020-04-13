@@ -37,7 +37,7 @@ public class Communication {
     public CommandParser getParser(){
         return parser;
     }
-    private void communicate() throws IOException, ClassNotFoundException {
+    public void communicate() throws IOException, ClassNotFoundException {
         boolean quit = false;
         int numArgs = 0;
         String commandNum = "";
