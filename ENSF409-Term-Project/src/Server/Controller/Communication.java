@@ -34,7 +34,6 @@ public class Communication {
 
     private Object communicate(){
         boolean quit = false;
-<<<<<<< HEAD
         int numArgs = 0;
         while(!quit){
         try {
@@ -43,22 +42,13 @@ public class Communication {
             for (int i = 0; i < numArgs; i++)
 
         }
-=======
-        while(!quit){
-            try {
-                if (socketIn.readObject() != null)
-                    parser.parseCommand((String)socketIn.readObject());
->>>>>>> 63797180219721f7229f3926ab0e67b653268aae
 
-            }
+        catch(IOException e){
+            e.printStackTrace();
+        }
 
-            catch(IOException e){
-                e.printStackTrace();
-            }
-
-            catch(ClassNotFoundException e){
-                e.printStackTrace();
-            }
+        catch(ClassNotFoundException e){
+            e.printStackTrace();
         }
     }
 }
