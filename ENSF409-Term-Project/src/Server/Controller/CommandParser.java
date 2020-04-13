@@ -1,13 +1,18 @@
 package Server.Controller;
 
 public class CommandParser {
-    private int numArguments;
+    //private int numArguments;
 
+    /**
+     *
+     * @param commandNum
+     * @return the number of objects to receive from the client
+     */
     public int parseCommand(String commandNum){
         switch(commandNum){
             case "1":
-                numArguments = 1;
-                break;
+                return 1;
+                //break;
             case "2":
                 break;
             case "3":
@@ -18,8 +23,8 @@ public class CommandParser {
                 break;
             default:
                 //invalid input
-                return -1;
+                return 0;
         }
-        return Integer.parseInt(commandNum);
+        return 0;
     }
 }
