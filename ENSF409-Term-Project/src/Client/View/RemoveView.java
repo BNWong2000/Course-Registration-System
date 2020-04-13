@@ -32,7 +32,7 @@ public class RemoveView extends JFrame {
         centerPanel = new JPanel();
         southPanel = new JPanel();
 
-        title = new JLabel("Search for a Course");
+        title = new JLabel("Remove Student From Course");
         courseName = new JLabel("Course Name: ");
         courseNum = new JLabel("Course Number: ");
         studentName = new JLabel("Student Name: ");
@@ -45,14 +45,17 @@ public class RemoveView extends JFrame {
         studentNumField = new JTextField(5);
 
         northPanel.add(title);
+        GridLayout centerLayout = new GridLayout(2, 4);
+        centerPanel.setLayout(centerLayout);
         centerPanel.add(courseName);
         centerPanel.add(courseNameField);
         centerPanel.add(courseNum);
         centerPanel.add(courseNumField);
         centerPanel.add(studentName);
         centerPanel.add(studentNameField);
-        centerPanel.add(courseNum);
+        centerPanel.add(studentNum);
         centerPanel.add(studentNumField);
+        centerPanel.setLayout(centerLayout);
         southPanel.add(remove);
         southPanel.add(cancel);
 
