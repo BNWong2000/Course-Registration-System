@@ -50,6 +50,9 @@ public class MainView extends JFrame{
         getContentPane().add(BorderLayout.CENTER, centerPane);
         getContentPane().add(BorderLayout.SOUTH, southPanel);
     }
+    public void setInfo(String text) {
+        info.setText(text);
+    }
 
     public void addEnrollListener(ActionListener a){
         enroll.addActionListener(a);

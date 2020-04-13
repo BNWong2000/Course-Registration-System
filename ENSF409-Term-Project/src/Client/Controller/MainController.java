@@ -1,16 +1,18 @@
 package Client.Controller;
 
 import Client.View.*;
+import Util.Course;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainController {
-
+    private final String commandNum = "1";
     private MainView mainView;
     private EnrollView enrollView;
     private RemoveView removeView;
     private SearchView searchView;
+    private Communication communication;
 
     public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView){
 
@@ -55,6 +57,7 @@ public class MainController {
         @Override
         public void actionPerformed(ActionEvent e) {
             //
+
         }
         //
     }
@@ -62,8 +65,9 @@ public class MainController {
     public class ViewCatListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            //
+            mainView.setInfo(communication.communicate(commandNum));
+
         }
-        //
+
     }
 }

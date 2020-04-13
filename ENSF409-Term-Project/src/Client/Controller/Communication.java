@@ -30,15 +30,35 @@ public class Communication {
         }
     }
 
+    public String communicate(String label){
+        Object incomingObject = null;
+        try{
+            socketOut.writeObject(label);
+            socketOut.flush();
+            incomingObject = socketIn.readObject();
+        }
+
+        catch(IOException e){
+        }
+        catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        return (String) incomingObject;
+    }
     public Object communicate(Object object, String label){
 
         Object incomingObject = null;
 
         try{
-            socketOut.writeObject(label);
-            socketOut.writeObject(object);
-            socketOut.flush();
-            incomingObject = socketIn.readObject();
+
+                socketOut.writeObject(label);
+
+                socketOut.writeObject(object);
+
+                socketOut.flush();
+
+                incomingObject = socketIn.readObject();
+
 
         } catch (IOException e) {
             // do something else
