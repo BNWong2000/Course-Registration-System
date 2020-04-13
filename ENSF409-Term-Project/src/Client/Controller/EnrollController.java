@@ -40,10 +40,12 @@ public class EnrollController {
             int courseNum;
             int studentNum;
             Integer sectionNum;
+            ArrayList<Object> data = new ArrayList<Object>();
             try{
                 courseNum = Integer.parseInt(fields.get(3));
                 studentNum = Integer.parseInt(fields.get(1));
                 sectionNum = Integer.parseInt(fields.get(4));
+                data.add(Integer.parseInt(fields.get(4)));
             }catch(NumberFormatException ex){
                 enrollView.sendDialogueMessage("please enter a proper course or student number");
                 return;
@@ -54,7 +56,11 @@ public class EnrollController {
 
             course = new Course(fields.get(2), courseNum);
             student = new Student(fields.get(0), studentNum);
-            String output = (String)communication.communicate(student, course, sectionNum, commandNum);
+            ArrayList<Object> objects = new ArrayList<Object>();
+            objects.add(new Student(fields.get(0), studentNum));
+            objects.add(new Course(fields.get(2), courseNum));
+            //String output = (String) communication.communicate(objects,data,commandNum);
+            String output = (String) communication.communicate(student,course,sectionNum,commandNum);
             enrollView.sendDialogueMessage(output);
 
         }

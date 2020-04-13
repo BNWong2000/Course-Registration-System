@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class Communication {
 
@@ -30,6 +31,29 @@ public class Communication {
         }
     }
 
+    public Object communicate(ArrayList<Object> objects, ArrayList<Object> data, String label){
+        Object incomingObject = null;
+
+        try{
+            socketOut.writeObject(label);
+            for (Object o: objects)
+                socketOut.writeObject(o);
+            for (Object o: data)
+                socketOut.writeObject(o);
+
+            socketOut.flush();
+            incomingObject = socketIn.readObject();
+        }
+
+        catch (IOException e) {
+            // do something else
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return incomingObject;
+    }
+
+
     public String communicate(String label){
         Object incomingObject = null;
         try{
@@ -45,6 +69,7 @@ public class Communication {
             e.printStackTrace();
         }
         return (String) incomingObject;
+
     }
     public Object communicate(Object object, String label){
 
