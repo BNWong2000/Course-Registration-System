@@ -1,12 +1,30 @@
 package Server.Controller;
 
 import Server.Model.Course;
+import Server.Model.CourseCatalogue;
+import Server.Model.DBManager;
 import Server.Model.Student;
 
 import java.util.ArrayList;
 
 public class CommandParser {
     //private int numArguments;
+
+    private CourseCatalogue cat;
+    private DBManager database;
+
+    public CommandParser(){
+        database = new DBManager();
+        cat = new CourseCatalogue (database);
+    }
+
+    public DBManager getDatabase(){
+        return database;
+    }
+
+    public CourseCatalogue getCat(){
+        return cat;
+    }
 
     /**
      *
@@ -36,7 +54,7 @@ public class CommandParser {
     public void doCommand(String commandNum, ArrayList<Object> info){
         switch(commandNum){
             case "1":
-                
+                searchCourseCatalogue((Course)info.get(0));
                 break;
             case "2":
                 break;
@@ -51,5 +69,13 @@ public class CommandParser {
                 return;
         }
 
+    }
+
+    private void searchCourseCatalogue(Course course) {
+        String name = course.getCourseName();
+        int num = course.getCourseNum();
+        if(cat.searchCat(name, num) != null){
+            System.out.println(cat.searchCat(name, num).toString());
+        }
     }
 }
