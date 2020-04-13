@@ -58,7 +58,7 @@ public class MainController {
     public class ViewStuListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            //
+            String studentID = mainView.send
 
         }
         //
