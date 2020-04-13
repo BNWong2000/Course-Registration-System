@@ -68,7 +68,13 @@ public class CourseOffering implements Serializable {
 	}
 
 
+
+
 	public boolean isCourse(String courseName, int courseNum) {
 		return theCourse.getCourseName().equals(courseName) && (theCourse.getCourseNum()==courseNum);
+	}
+
+	public String getCourseName() {
+		return theCourse.getCourseName() + " " + theCourse.getCourseNum();
 	}
 }

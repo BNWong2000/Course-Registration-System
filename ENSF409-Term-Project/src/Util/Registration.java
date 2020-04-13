@@ -48,6 +48,7 @@ public class Registration implements Serializable {
 	@Override
 	public String toString () {
 		String st = "\n";
+		st += "The Course: " + getTheOffering().getCourseName() + "\n";
 		st += "The Offering: " + getTheOffering () + "\n";
 		st += "Grade: " + getGrade();
 		st += "\n-----------\n";

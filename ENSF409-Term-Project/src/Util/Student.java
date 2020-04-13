@@ -51,6 +51,7 @@ public class Student implements Serializable {
 	public String registrationListToString(){
 		String st = "";
 		for(int i = 0; i < studentRegList.size(); ++i){
+			st +=
 			st += studentRegList.get(i).toString();
 			st += "\n";
 		}
