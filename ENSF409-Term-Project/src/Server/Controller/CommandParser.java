@@ -1,5 +1,10 @@
 package Server.Controller;
 
+import Server.Model.Course;
+import Server.Model.Student;
+
+import java.util.ArrayList;
+
 public class CommandParser {
     //private int numArguments;
 
@@ -26,5 +31,25 @@ public class CommandParser {
                 return 0;
         }
         return 0;
+    }
+
+    public void doCommand(String commandNum, Course course, Student student){
+        switch(commandNum){
+            case "1":
+
+                break;
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "5":
+                break;
+            default:
+                //invalid input
+                return;
+        }
+
     }
 }
