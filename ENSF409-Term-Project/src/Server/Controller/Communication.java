@@ -5,6 +5,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.concurrent.Executors;
 
 public class Communication {
@@ -32,23 +33,30 @@ public class Communication {
 
     }
 
-    private Object communicate(){
+    private Object communicate() throws IOException, ClassNotFoundException {
         boolean quit = false;
         int numArgs = 0;
-        while(!quit){
-        try {
-            if (socketIn.readObject() != null)
-                numArgs = parser.parseCommand((String)socketIn.readObject());
+        String commandNum = "";
+        while(!quit) {
+            try {
+                commandNum = (String) socketIn.readObject();
+                numArgs = parser.parseCommand(commandNum);
+
+
+                ArrayList<Object> objects = new ArrayList<>();
+                for (int i = 0; i < numArgs; i++)
+                    objects.add(socketIn.readObject());
+                parser.doCommand(commandNum, objects);
+
         }
 
         catch(IOException e){
-            e.printStackTrace();
+                e.printStackTrace();
         }
 
-        catch(ClassNotFoundException e){
-            e.printStackTrace();
+        return null;
+
         }
-    }
 }
 
 
