@@ -140,4 +140,8 @@ public class CommandParser {
         }
         return "An unexpected error occured. ";
     }
+<<<<<<< HEAD
 } //
+=======
+} //added this comment
+>>>>>>> 277039d75bcc313c4bc578ec08daa007c7498113
