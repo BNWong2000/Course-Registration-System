@@ -63,7 +63,12 @@ public class CommandParser {
             case "3":
                 return removeCourseFromStudent((Student)info.get(0), (Course)info.get(1));
             case "4":
-                return printStudentCourses(Integer.parseInt((String)info.get(0)));
+                try{
+                    return printStudentCourses(Integer.parseInt((String)info.get(0)));
+                }catch(NumberFormatException e){
+                    //System.err.print("invalid input");
+                    return null;
+                }
             case "5":
                 return addCourseToStudent((Student) info.get(0), (Course)info.get(1), (int)info.get(2));
             default:

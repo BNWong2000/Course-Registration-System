@@ -4,6 +4,10 @@ package Util;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ */
 public class Course implements Serializable {
 	private static final long serialVersionUID=1L;
 	private String courseName;
