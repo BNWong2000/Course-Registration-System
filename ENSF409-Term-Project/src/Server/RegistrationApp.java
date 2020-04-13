@@ -5,6 +5,12 @@ import Server.Controller.Communication;
 import Util.Course;
 import Util.Student;
 
+/**
+ * The main application on the server side.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
+ */
 public class RegistrationApp {
 	public static void main (String [] args) {
 		//RegistrationApp myRegistrationApp = new RegistrationApp();

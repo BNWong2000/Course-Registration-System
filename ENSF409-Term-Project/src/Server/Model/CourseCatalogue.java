@@ -5,32 +5,70 @@ import java.util.ArrayList;
 import Util.Course;
 import Util.CourseOffering;
 
+/**
+ * A class to store the catalogue of courses available
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 2.0
+ */
 public class CourseCatalogue {
-	
+
+	/**
+	 * The list of courses on the catalogue
+	 */
 	private ArrayList <Course> courseList;
+
+	/**
+	 * The database to store all the information in
+	 */
 	private DBManager db;
-	
+
+	/**
+	 * A constructor for the course catalogue
+	 * @param db the database to retrieve information from.
+	 */
 	public CourseCatalogue (DBManager db) {
 		setDb(db);
 		loadFromDataBase ();
 	}
 
+	/**
+	 * sets the database
+	 * @param db the database to set.
+	 */
 	public void setDb(DBManager db){
 		this.db = db;
 	}
-	
+
+	/**
+	 * loads information from the database.
+	 */
 	private void loadFromDataBase() {
 		// TODO Auto-generated method stub
 		//DBManager db = new DBManager();
 		setCourseList(db.readFromDataBase());
 		
 	}
+
+	/**
+	 * crease a new course offering
+	 * @param c the coourse
+	 * @param secNum the section number
+	 * @param secCap the max cap of the section.
+	 */
 	public void createCourseOffering (Course c, int secNum, int secCap) {
 		if (c!= null) {
 			CourseOffering theOffering = new CourseOffering (secNum, secCap);
 			c.addOffering(theOffering);
 		}
 	}
+
+	/**
+	 * searches the catalogue for a given course
+	 * @param courseName the name of the course to search for
+	 * @param courseNum the course number to search for
+	 * @return the course, if it is found, or null if it is not found.
+	 */
 	public Course searchCat (String courseName, int courseNum) {
 		for (Course c : courseList) {
 			if (courseName.equals(c.getCourseName()) &&
@@ -41,23 +79,36 @@ public class CourseCatalogue {
 		displayCourseNotFoundError();
 		return null;
 	}
-	//Typically, methods that are called from other methods of the class
-	//are private and are not exposed for use by other classes.
-	//These methods are refereed to as helper methods or utility methods
+
+	/**
+	 * prints an error if the course is not found.
+	 */
 	private void displayCourseNotFoundError() {
 		// TODO Auto-generated method stub
 		System.err.println("Course was not found!");
 		
 	}
+
+	/**
+	 * Gets the list of courses.
+	 * @return the list of courses.
+	 */
 	public ArrayList <Course> getCourseList() {
 		return courseList;
 	}
 
-
+	/**
+	 * Sets the list of courses
+	 * @param courseList the course list to set to.
+	 */
 	public void setCourseList(ArrayList <Course> courseList) {
 		this.courseList = courseList;
 	}
 
+	/**
+	 * Gets the information about the course catalogue
+	 * @return the information in the course catalogue in string form.
+	 */
 	@Override
 	public String toString () {
 		String st = "All courses in the catalogue: \n";

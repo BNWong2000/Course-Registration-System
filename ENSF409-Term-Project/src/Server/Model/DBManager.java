@@ -5,55 +5,61 @@ import Util.Student;
 
 import java.util.ArrayList;
 
-//This class is simulating a database for our
-//program
+/**
+ * A class to store the database for the registration system.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 2.0
+ */
 public class DBManager {
 
+	/**
+	 * the list of courses stored in the database
+	 */
 	private ArrayList <Course> courseList;
+
+	/**
+	 * the list of students stored in the database
+	 */
 	private ArrayList <Student> studentList;
 
-	public DBManager (ArrayList<Course> courseList, ArrayList<Student> studentList) {
-		setCourseList(courseList);
-		setStudentList(studentList);
-	}
+	/**
+	 * A constructor for the database manager.
+	 */
 	public DBManager () {
 		courseList = new ArrayList<Course>();
 		studentList = new ArrayList<Student>();
 	}
 
+	/**
+	 * gets the course list.
+	 * @return the course list
+	 */
 	public ArrayList<Course> getCourseList() {
 		return courseList;
 	}
 
-	public void setCourseList(ArrayList<Course> courseList) {
-		this.courseList = courseList;
-	}
-
-	public ArrayList<Student> getStudentList() {
-		return studentList;
-	}
-
-	public void setStudentList(ArrayList<Student> studentList) {
-		this.studentList = studentList;
-	}
-
+	/**
+	 * adds a student to the student list database
+	 * @param s
+	 */
 	public void addStudent(Student s){
 		studentList.add(s);
 	}
 
+	/**
+	 * adds a course to the database
+	 * @param c
+	 */
 	public void addCourse(Course c){
 		courseList.add(c);
 	}
 
-	public Course getCourse(String name, int num){
-		for(int i = 0; i < courseList.size(); ++i){
-			if(courseList.get(i).getCourseName().equals(name) && courseList.get(i).getCourseNum() == num){
-				return courseList.get(i);
-			}
-		}
-		return null;
-	}
-
+	/**
+	 * gets a student by ID
+	 * @param id the id to search for
+	 * @return the student, it they are found.
+	 */
 	public Student getStudent(int id){
 		for(int i = 0; i < studentList.size(); ++i){
 			if(studentList.get(i).getStudentId() == id){
@@ -63,6 +69,11 @@ public class DBManager {
 		return null;
 	}
 
+	/**
+	 * gets a student by their name.
+	 * @param name the name of the student
+	 * @return the student, if they are found.
+	 */
 	public Student getStudent(String name){
 		for(int i = 0; i < studentList.size(); ++i){
 			if(studentList.get(i).getStudentName().equals(name)){
@@ -72,6 +83,10 @@ public class DBManager {
 		return null;
 	}
 
+	/**
+	 * Gets the course list.
+	 * @return the course list.
+	 */
 	public ArrayList readFromDataBase() {
 		// TODO Auto-generated method stub
 		return courseList;

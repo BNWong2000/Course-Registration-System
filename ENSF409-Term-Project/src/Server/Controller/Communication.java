@@ -7,18 +7,44 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * A class to Communicate with the client.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
+ */
 public class Communication {
 
+    /**
+     * the client's socket
+     */
     private Socket aSocket;
 
+    /**
+     * the object input stream from the client
+     */
     private ObjectInputStream socketIn;
 
+    /**
+     * the object output stream to send to the client
+     */
     private ObjectOutputStream socketOut;
 
+    /**
+     * the socket for the server.
+     */
     private ServerSocket serverSocket;
 
+    /**
+     * the command parser, which manages commands from the client.
+     */
     private CommandParser parser;
 
+    /**
+     * A constructor for the communication class.
+     * @param port the port to connect to.
+     * @param parser the command parser to use.
+     */
     public Communication(int port, CommandParser parser){
         try {
             serverSocket = new ServerSocket(port);
@@ -34,9 +60,18 @@ public class Communication {
 
     }
 
+    /**
+     * gets the command parser
+     * @return the command parser.
+     */
     public CommandParser getParser(){
         return parser;
     }
+
+    /**
+     * A function used to communicate withe the client.
+     * sends and receives objects from the client.
+     */
     public void communicate() {
         boolean quit = false;
         int numArgs = 0;

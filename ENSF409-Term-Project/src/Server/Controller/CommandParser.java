@@ -9,27 +9,50 @@ import Util.Student;
 
 import java.util.ArrayList;
 
+/**
+ * A class to parse commands from the client
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
+ */
 public class CommandParser {
-    //private int numArguments;
 
+    /**
+     * the course catalogue to read from
+     */
     private CourseCatalogue cat;
+
+    /**
+     * the database to load information from
+     */
     private DBManager database;
 
+    /**
+     * a constructor for this class.
+     */
     public CommandParser(){
         database = new DBManager();
         cat = new CourseCatalogue (database);
     }
 
+    /**
+     * gets the database for this class
+     * @return the database
+     */
     public DBManager getDatabase(){
         return database;
     }
 
+    /**
+     * gets the course catalogue
+     * @return the course catalogue
+     */
     public CourseCatalogue getCat(){
         return cat;
     }
 
     /**
-     *
+     * Parses the command number, and returns the number of objects that command needs.
      * @param commandNum
      * @return the number of objects to receive from the client
      */
@@ -53,6 +76,12 @@ public class CommandParser {
         //return 0;
     }
 
+    /**
+     * does the command, based on the command number.
+     * @param commandNum the command number recieved from the client
+     * @param info All the info needed to complete the command
+     * @return the needed objects to send back to the client (dependant on the command)
+     */
     public Object doCommand(String commandNum, ArrayList<Object> info){
         switch(commandNum){
             case "1":
@@ -79,6 +108,11 @@ public class CommandParser {
 
     }
 
+    /**
+     * Prints the student's courses from their ID number.
+     * @param id the ID number of the student
+     * @return a string with the courses of the student
+     */
     private String printStudentCourses(int id) {
 
         if (database.getStudent(id) == null)
@@ -86,6 +120,11 @@ public class CommandParser {
         return (database.getStudent(id)  + database.getStudent(id).registrationListToString());
     }
 
+    /**
+     * Searches the course catalogue for a course
+     * @param course the course to search for
+     * @return the course, if found.
+     */
     private Course searchCourseCatalogue(Course course) {
         String name = course.getCourseName();
         int num = course.getCourseNum();
@@ -97,6 +136,12 @@ public class CommandParser {
         return null;
     }
 
+    /**
+     * Removes a student from a course
+     * @param student the student
+     * @param course the course to remove them from
+     * @return the response to the client, determining success or failure/error
+     */
     private String removeCourseFromStudent(Student student, Course course) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
@@ -122,6 +167,13 @@ public class CommandParser {
         return "An Error Occured. Unable to perform this action";
     }
 
+    /**
+     * Enrolls a student in a course
+     * @param student the student to enroll
+     * @param course the course to enroll the student into.
+     * @param sectionNum the section number to enroll the student into.
+     * @return the response to the client about the success or failure of this action.
+     */
     private String addCourseToStudent(Student student, Course course, int sectionNum) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
