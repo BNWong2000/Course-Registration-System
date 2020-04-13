@@ -34,21 +34,10 @@ public class Communication {
 
     private Object communicate(){
         boolean quit = false;
-<<<<<<< HEAD
-        int numArgs = 0;
-        while(!quit){
-        try {
-            if (socketIn.readObject() != null)
-                numArgs = parser.parseCommand((String)socketIn.readObject());
-            for (int i = 0; i < numArgs; i++)
-
-        }
-=======
         while(!quit){
             try {
                 if (socketIn.readObject() != null)
                     parser.parseCommand((String)socketIn.readObject());
->>>>>>> 63797180219721f7229f3926ab0e67b653268aae
 
             }
 
@@ -60,8 +49,9 @@ public class Communication {
                 e.printStackTrace();
             }
         }
+
     }
-}
+
 
 
 }
