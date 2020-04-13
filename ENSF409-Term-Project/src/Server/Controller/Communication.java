@@ -42,7 +42,6 @@ public class Communication {
                 commandNum = (String) socketIn.readObject();
                 numArgs = parser.parseCommand(commandNum);
 
-
                 ArrayList<Object> objects = new ArrayList<>();
                 for (int i = 0; i < numArgs; i++)
                     objects.add(socketIn.readObject());
@@ -53,8 +52,6 @@ public class Communication {
         catch(IOException e){
                 e.printStackTrace();
         }
-
-        
 
         }
 
