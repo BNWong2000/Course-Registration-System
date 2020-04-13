@@ -3,6 +3,7 @@ package Server.Controller;
 import Server.Model.CourseCatalogue;
 import Server.Model.DBManager;
 import Util.Course;
+import Util.Student;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class CommandParser {
             case "2":
                 return 0;
             case "3":
-                break;
+                return 2;
             case "4":
                 return 1;
             case "5":
@@ -58,9 +59,9 @@ public class CommandParser {
             case "2":
                 return cat.toString();
             case "3":
-                break;
+                return removeCourseFromStudent((Student)info.get(0), (Course)info.get(1));
             case "4":
-                return printStudentCourses((int)info.get(0));
+                return printStudentCourses(Integer.parseInt((String)info.get(0)));
             case "5":
                 break;
             default:
@@ -73,7 +74,9 @@ public class CommandParser {
 
     private String printStudentCourses(int id) {
 
-        return database.getStudent(id).registrationListToString();
+        if (database.getStudent(id) == null)
+            return null;
+        return (database.getStudent(id)  + database.getStudent(id).registrationListToString());
     }
 
     private Course searchCourseCatalogue(Course course) {
@@ -85,5 +88,25 @@ public class CommandParser {
             return cat.searchCat(name, num);
         }
         return null;
+    }
+
+    private String removeCourseFromStudent(Student student, Course course) {
+        String courseName = course.getCourseName();
+        int courseNum = course.getCourseNum();
+        Course theCourse = cat.searchCat(courseName, courseNum);
+        if(theCourse!= null){
+            int id = student.getStudentId();
+            if(database.getStudent(id) != null){
+                if(student.isInCourse(courseName, courseNum)){
+                    database.getStudent(id).removeFrom(courseName, courseNum);
+                    return "Removed student from " + courseName + " " + courseNum;
+                }else{
+                    return "Student is not in this course. ";
+                }
+            }else{
+                return "Could not perform this action!. ";
+            }
+        }
+        return "An Error Occured. Unable to perform this action";
     }
 }

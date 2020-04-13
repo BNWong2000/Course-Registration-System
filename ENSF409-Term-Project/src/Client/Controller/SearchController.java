@@ -55,6 +55,8 @@ public class SearchController {
         //
     }
 
+
+
     public class CancelListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {

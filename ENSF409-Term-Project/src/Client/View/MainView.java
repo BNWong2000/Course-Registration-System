@@ -60,6 +60,10 @@ public class MainView extends JFrame{
         return JOptionPane.showInputDialog("Enter the Student ID:");
     }
 
+    public void sendDialogueMessage(String message) {
+        JOptionPane.showMessageDialog(this, message);
+    }
+
     public void addEnrollListener(ActionListener a){
         enroll.addActionListener(a);
     }

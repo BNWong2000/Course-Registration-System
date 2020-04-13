@@ -63,6 +63,15 @@ public class Student implements Serializable {
 
 	}
 
+	public boolean isInCourse(String courseName, int courseNum){
+		for(int i = 0; i < offeringList.size(); ++i){
+			if(offeringList.get(i).isCourse(courseName, courseNum)){
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void removeFrom(String courseName, int courseNum) {
 		for(int i = 0; i < offeringList.size(); ++i){
 			if(offeringList.get(i).isCourse(courseName, courseNum)){

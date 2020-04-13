@@ -60,7 +60,18 @@ public class MainController {
         @Override
         public void actionPerformed(ActionEvent e) {
             String studentID = mainView.getStudentID();
-            mainView.setInfo((String)communication.communicate(studentID,stuCommandNum));
+
+                String student = (String)communication.communicate(studentID, stuCommandNum);
+                if (student == null){
+                    mainView.sendDialogueMessage("There is no student with this ID!");
+                }
+                mainView.setInfo(student);
+
+
+
+
+
+
 
         }
         //
@@ -69,7 +80,6 @@ public class MainController {
     public class ViewCatListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-
 
             mainView.setInfo(communication.communicate(catCommandNum));
 
