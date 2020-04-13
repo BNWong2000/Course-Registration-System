@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a618bc-b6e7-4c7f-9245-ba8d9fbdd2d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Controller/CommandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Controller/CommandParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Course.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
