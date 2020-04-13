@@ -31,7 +31,6 @@ public class Communication {
     }
 
     public String communicate(String label){
-        System.out.println("hi");
         Object incomingObject = null;
         try{
 
@@ -48,6 +47,7 @@ public class Communication {
         return (String) incomingObject;
     }
     public Object communicate(Object object, String label){
+
 
         Object incomingObject = null;
 

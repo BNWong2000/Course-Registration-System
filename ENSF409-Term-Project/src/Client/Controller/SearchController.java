@@ -27,6 +27,7 @@ public class SearchController {
 
         public void actionPerformed(ActionEvent e) {
 
+
             ArrayList<String> fields = new ArrayList<String>(searchView.getFields());
             // check if any of the fields are empty
             for (String s : fields) {

@@ -11,7 +11,7 @@ public class ClientRegistrationApp {
         MainView mainView = new MainView();
         mainView.setVisible(true);
         Communication communicate =  new Communication("localhost", 8099);
-        MainController mainController = new MainController(mainView, enrollView, removeView, searchView);
+        MainController mainController = new MainController(mainView, enrollView, removeView, searchView,communicate);
         SearchController searchController = new SearchController(searchView, communicate);
         mainView.setVisible(true);
     }

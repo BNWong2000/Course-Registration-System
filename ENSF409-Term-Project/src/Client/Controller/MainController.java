@@ -14,12 +14,13 @@ public class MainController {
     private SearchView searchView;
     private Communication communication;
 
-    public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView){
+    public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView,Communication communication){
 
         this.mainView = mainView;
         this.enrollView = enrollView;
         this.removeView = removeView;
         this.searchView = searchView;
+        this.communication = communication;
         mainView.addEnrollListener(new EnrollListener());
         mainView.addRemoveListener(new RemoveListener());
         mainView.addSearchListener(new SearchListener());
@@ -49,6 +50,7 @@ public class MainController {
         @Override
         public void actionPerformed(ActionEvent e) {
             searchView.setVisible(true);
+
         }
         //
     }
@@ -65,6 +67,8 @@ public class MainController {
     public class ViewCatListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+
+
             mainView.setInfo(communication.communicate(commandNum));
 
         }
