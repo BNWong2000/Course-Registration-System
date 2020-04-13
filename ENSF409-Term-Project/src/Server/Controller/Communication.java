@@ -23,6 +23,7 @@ public class Communication {
     public Communication(int port, CommandParser parser){
         try {
             serverSocket = new ServerSocket(port);
+            aSocket = serverSocket.accept();
             System.out.println("The server is now running...");
             socketIn = new ObjectInputStream(aSocket.getInputStream());
             socketOut = new ObjectOutputStream((aSocket.getOutputStream()));
