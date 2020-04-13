@@ -33,10 +33,10 @@ public class CommandParser {
         return 0;
     }
 
-    public void doCommand(String commandNum, Course course, Student student){
+    public void doCommand(String commandNum, ArrayList<Object> info){
         switch(commandNum){
             case "1":
-
+                
                 break;
             case "2":
                 break;
