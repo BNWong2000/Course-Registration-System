@@ -49,7 +49,11 @@ public class SearchController {
 
             course = new Course(fields.get(0), courseNum);
             course = (Course)communication.communicate(course, commandNum);
-            searchView.sendDialogueMessage(course.toString());
+            if(course != null){
+                searchView.sendDialogueMessage(course.toString());
+            }else{
+                searchView.sendDialogueMessage("Course Not Found!");
+            }
 
         }
         //
