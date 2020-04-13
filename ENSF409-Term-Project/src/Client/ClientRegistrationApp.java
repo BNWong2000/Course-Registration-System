@@ -14,6 +14,7 @@ public class ClientRegistrationApp {
         MainController mainController = new MainController(mainView, enrollView, removeView, searchView,communicate);
         SearchController searchController = new SearchController(searchView, communicate);
         RemoveController removeController = new RemoveController(removeView, communicate);
+        EnrollController enrollController = new EnrollController(enrollView, communicate);
         mainView.setVisible(true);
     }
 }

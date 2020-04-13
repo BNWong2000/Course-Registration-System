@@ -92,4 +92,23 @@ public class Communication {
         return incomingObject;
     }
 
+    public Object communicate(Student student, Course course, Integer sectionNum, String label){
+
+        Object incomingObject = null;
+
+        try{
+            socketOut.writeObject(label);
+            socketOut.writeObject(student);
+            socketOut.writeObject(course);
+            socketOut.writeObject(sectionNum);
+            socketOut.flush();
+            incomingObject = socketIn.readObject();
+
+        } catch (IOException e) {
+            // do something else
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return incomingObject;
+    }
 }

@@ -63,6 +63,15 @@ public class DBManager {
 		return null;
 	}
 
+	public Student getStudent(String name){
+		for(int i = 0; i < studentList.size(); ++i){
+			if(studentList.get(i).getStudentName().equals(name)){
+				return studentList.get(i);
+			}
+		}
+		return null;
+	}
+
 	public ArrayList readFromDataBase() {
 		// TODO Auto-generated method stub
 		return courseList;
