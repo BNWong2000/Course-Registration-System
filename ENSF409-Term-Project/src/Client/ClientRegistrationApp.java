@@ -3,6 +3,12 @@ package Client;
 import Client.Controller.*;
 import Client.View.*;
 
+/**
+ * Runs the client-side Application.
+ *
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ */
 public class ClientRegistrationApp {
     public static void main(String[] args){
         EnrollView enrollView = new EnrollView();
