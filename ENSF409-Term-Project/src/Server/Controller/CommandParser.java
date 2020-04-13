@@ -50,7 +50,7 @@ public class CommandParser {
                 //invalid input
                 return 0;
         }
-        return 0;
+        //return 0;
     }
 
     public Object doCommand(String commandNum, ArrayList<Object> info){
@@ -70,7 +70,7 @@ public class CommandParser {
                 //invalid input
                 return null;
         }
-        return null;
+        //return null;
 
     }
 
@@ -120,6 +120,14 @@ public class CommandParser {
     private String addCourseToStudent(Student student, Course course, int sectionNum) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
+        if(database.getStudent(student.getStudentId()) == null || database.getStudent(student.getStudentName()) == null || database.getStudent(student.getStudentName()).getStudentId() != student.getStudentId()){
+            return "Student is not in our system!";
+        }else{
+            student = database.getStudent(student.getStudentId());
+        }
+        if(student.isInCourse(courseName, courseNum)){
+            return "Student is already in this course.";
+        }
         Course theCourse = cat.searchCat(courseName, courseNum);
         if(theCourse != null){
             int id = student.getStudentId();
