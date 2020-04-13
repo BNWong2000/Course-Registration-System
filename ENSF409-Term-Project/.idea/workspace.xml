@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a618bc-b6e7-4c7f-9245-ba8d9fbdd2d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Controller/CommandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Controller/CommandParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Controller/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Model/CourseCatalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Model/CourseCatalogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Model/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Model/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Util/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/CourseOffering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/CourseOffering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
