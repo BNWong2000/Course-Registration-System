@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/RegistrationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/RegistrationApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$SearchListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$SearchListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/Communication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/RegistrationApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +81,21 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="239" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1500.960@0.0.1500.960" timestamp="1586730149502" />
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586732457716">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586740801709">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586732457716" />
-    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586732457716">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
+    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586740801709">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586732457716" />
-    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586732457716">
+    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
+    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586740801709">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586732457716" />
-    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586732457716">
+    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586740801709">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586732457716" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
   </component>
 </project>

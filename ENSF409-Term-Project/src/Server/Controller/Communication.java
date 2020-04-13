@@ -20,12 +20,13 @@ public class Communication {
 
     private CommandParser parser;
 
-    public Communication(int port){
+    public Communication(int port, CommandParser parser){
         try {
             serverSocket = new ServerSocket(port);
             System.out.println("The server is now running...");
             socketIn = new ObjectInputStream(aSocket.getInputStream());
             socketOut = new ObjectOutputStream((aSocket.getOutputStream()));
+            this.parser = parser;
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,6 +34,9 @@ public class Communication {
 
     }
 
+    public CommandParser getParser(){
+        return parser;
+    }
     private void communicate() throws IOException, ClassNotFoundException {
         boolean quit = false;
         int numArgs = 0;
