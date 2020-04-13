@@ -86,6 +86,11 @@ public class CommandParser {
     private String removeCourseFromStudent(Student student, Course course) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
+        if(database.getStudent(student.getStudentId()) == null || database.getStudent(student.getStudentName()) == null || database.getStudent(student.getStudentName()).getStudentId() != student.getStudentId()){
+            return "Student is not in our system!";
+        }else{
+            student = database.getStudent(student.getStudentId());
+        }
         Course theCourse = cat.searchCat(courseName, courseNum);
         if(theCourse!= null){
             int id = student.getStudentId();
