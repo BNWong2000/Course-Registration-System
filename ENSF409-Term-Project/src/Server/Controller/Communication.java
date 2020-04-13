@@ -34,10 +34,13 @@ public class Communication {
 
     private Object communicate(){
         boolean quit = false;
-        while(!quit)
+        int numArgs = 0;
+        while(!quit){
         try {
             if (socketIn.readObject() != null)
-                parser.parseCommand((String)socketIn.readObject());
+                numArgs = parser.parseCommand((String)socketIn.readObject());
+            for (int i = 0; i < numArgs; i++)
+
         }
 
         catch(IOException e){
@@ -47,9 +50,8 @@ public class Communication {
         catch(ClassNotFoundException e){
             e.printStackTrace();
         }
-
     }
-
+}
 
 
 }
