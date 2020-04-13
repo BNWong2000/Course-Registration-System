@@ -57,7 +57,7 @@ public class CommandParser {
                 return searchCourseCatalogue((Course)info.get(0));
                 //break;
             case "2":
-                break;
+                return cat.toString();
             case "3":
                 break;
             case "4":
