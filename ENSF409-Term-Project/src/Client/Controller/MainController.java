@@ -11,17 +11,13 @@ public class MainController {
     private EnrollView enrollView;
     private RemoveView removeView;
     private SearchView searchView;
-    private ViewStuView viewStuView;
-    private ViewCatView viewCatView;
 
-    public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView, ViewStuView viewStuView, ViewCatView viewCatView){
+    public MainController(MainView mainView, EnrollView enrollView, RemoveView removeView, SearchView searchView){
 
         this.mainView = mainView;
         this.enrollView = enrollView;
         this.removeView = removeView;
         this.searchView = searchView;
-        this.viewStuView = viewStuView;
-        this.viewCatView = viewCatView;
         mainView.addEnrollListener(new EnrollListener());
         mainView.addRemoveListener(new RemoveListener());
         mainView.addSearchListener(new SearchListener());
@@ -58,7 +54,7 @@ public class MainController {
     public class ViewStuListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            viewStuView.setVisible(true);
+            //
         }
         //
     }
@@ -66,7 +62,7 @@ public class MainController {
     public class ViewCatListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            viewCatView.setVisible(true);
+            //
         }
         //
     }

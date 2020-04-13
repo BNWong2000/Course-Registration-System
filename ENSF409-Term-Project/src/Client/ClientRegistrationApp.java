@@ -8,12 +8,10 @@ public class ClientRegistrationApp {
         EnrollView enrollView = new EnrollView();
         SearchView searchView = new SearchView();
         RemoveView removeView = new RemoveView();
-        ViewCatView viewCatView = new ViewCatView();
-        ViewStuView viewStuView = new ViewStuView();
         MainView mainView = new MainView();
         mainView.setVisible(true);
         Communication communicate =  new Communication("localhost", 8099);
-        MainController mainController = new MainController(mainView, enrollView, removeView, searchView, viewStuView, viewCatView);
+        MainController mainController = new MainController(mainView, enrollView, removeView, searchView);
         SearchController searchController = new SearchController(searchView, communicate);
         mainView.setVisible(true);
     }

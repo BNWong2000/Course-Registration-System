@@ -40,7 +40,7 @@
       <recent name="C:\Users\Branden Wong\Desktop\ENSF409-Term-Project\ENSF409-Term-Project\src\Util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientRegistrationApp">
+  <component name="RunManager" selected="Application.RegistrationApp">
     <configuration name="ClientRegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.ClientRegistrationApp" />
       <module name="ENSF409-Term-Project" />
@@ -92,30 +92,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586726693625" />
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586744057359">
+    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586745983565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586744057359" />
+    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1586745983565" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586746015724">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586746015724" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586724552193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586724552193" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586745530430">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586746088259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586745530430" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586745530430">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586746088259" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1586746088259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586745530430" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586745530430">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586746088259" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1586746088259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586745530430" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586745530430">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586746088259" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1586746088259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586745530430" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586746088259" />
     <state x="342" y="141" key="new project wizard" timestamp="1586743584101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
