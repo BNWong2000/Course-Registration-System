@@ -51,11 +51,11 @@ public class CommandParser {
         return 0;
     }
 
-    public void doCommand(String commandNum, ArrayList<Object> info){
+    public Object doCommand(String commandNum, ArrayList<Object> info){
         switch(commandNum){
             case "1":
-                searchCourseCatalogue((Course)info.get(0));
-                break;
+                return searchCourseCatalogue((Course)info.get(0));
+                //break;
             case "2":
                 break;
             case "3":
@@ -66,17 +66,20 @@ public class CommandParser {
                 break;
             default:
                 //invalid input
-                return;
+                return null;
         }
+        return null;
 
     }
 
-    private void searchCourseCatalogue(Course course) {
+    private Course searchCourseCatalogue(Course course) {
         String name = course.getCourseName();
         int num = course.getCourseNum();
         System.out.println(name + " " + num);
         if(cat.searchCat(name, num) != null){
             System.out.println(cat.searchCat(name, num).toString());
+            return cat.searchCat(name, num);
         }
+        return null;
     }
 }
