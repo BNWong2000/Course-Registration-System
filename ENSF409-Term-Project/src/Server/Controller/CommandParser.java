@@ -33,11 +33,10 @@ public class CommandParser {
     public int parseCommand(String commandNum){
         switch(commandNum){
             case "1":
-
                 return 1;
                 //break;
             case "2":
-                break;
+                return 0;
             case "3":
                 break;
             case "4":

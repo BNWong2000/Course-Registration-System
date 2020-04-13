@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainController {
-    private final String commandNum = "1";
+    private final String commandNum = "2";
     private MainView mainView;
     private EnrollView enrollView;
     private RemoveView removeView;
