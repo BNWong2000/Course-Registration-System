@@ -7,7 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainController {
-    private final String commandNum = "2";
+    private final String catCommandNum = "2";
+    private final String stuCommandNum = "4";
     private MainView mainView;
     private EnrollView enrollView;
     private RemoveView removeView;
@@ -69,7 +70,7 @@ public class MainController {
         public void actionPerformed(ActionEvent e) {
 
 
-            mainView.setInfo(communication.communicate(commandNum));
+            mainView.setInfo(communication.communicate(catCommandNum));
 
         }
 
