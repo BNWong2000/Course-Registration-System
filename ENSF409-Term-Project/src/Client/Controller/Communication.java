@@ -46,7 +46,10 @@ public class Communication {
             // do something else
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } catch(NullPointerException e){
+
         }
+
         return incomingObject;
     }
 

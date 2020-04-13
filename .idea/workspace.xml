@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/Communication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$SearchListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$SearchListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Model/CourseOffering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Model/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/Communication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/CourseCatalogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/CourseCatalogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/CourseOffering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/DBManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/RegistrationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/RegistrationApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +39,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAB8E3" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ClientRegistrationApp">
     <configuration name="ClientRegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.ClientRegistrationApp" />
       <module name="ENSF409-Term-Project" />
@@ -35,9 +55,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegistrationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.RegistrationApp" />
+      <module name="ENSF409-Term-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ClientRegistrationApp" />
+        <item itemvalue="Application.RegistrationApp" />
       </list>
     </recent_temporary>
   </component>
@@ -71,21 +105,25 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="239" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1500.960@0.0.1500.960" timestamp="1586730149502" />
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586740801709">
+    <state x="531" y="239" key="FileChooserDialogImpl" timestamp="1586741757260">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
-    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586740801709">
+    <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1586741757260" />
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586744501412">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
-    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586740801709">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586744501412" />
+    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586744501411">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
-    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586740801709">
+    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586744501411" />
+    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586744501411">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586740801709" />
+    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586744501411" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586744501411">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586744501411" />
   </component>
 </project>

@@ -49,7 +49,8 @@ public class Communication {
                 ArrayList<Object> objects = new ArrayList<>();
                 for (int i = 0; i < numArgs; i++)
                     objects.add(socketIn.readObject());
-                parser.doCommand(commandNum, objects);
+                 socketOut.writeObject(parser.doCommand(commandNum, objects));
+
 
             }
             catch(ClassNotFoundException e){
