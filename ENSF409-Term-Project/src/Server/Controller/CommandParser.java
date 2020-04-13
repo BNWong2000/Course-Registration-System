@@ -34,6 +34,7 @@ public class CommandParser {
     public int parseCommand(String commandNum){
         switch(commandNum){
             case "1":
+
                 return 1;
                 //break;
             case "2":
@@ -74,6 +75,7 @@ public class CommandParser {
     private void searchCourseCatalogue(Course course) {
         String name = course.getCourseName();
         int num = course.getCourseNum();
+        System.out.println(name + " " + num);
         if(cat.searchCat(name, num) != null){
             System.out.println(cat.searchCat(name, num).toString());
         }

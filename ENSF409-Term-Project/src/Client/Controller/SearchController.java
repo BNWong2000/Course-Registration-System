@@ -47,7 +47,7 @@ public class SearchController {
             }
 
             course = new Course(fields.get(0), courseNum);
-            //communication.communicate(course, commandNum);
+            communication.communicate(course, commandNum);
             searchView.sendDialogueMessage("course: " + fields.get(0) + " " + fields.get(1));
 
         }

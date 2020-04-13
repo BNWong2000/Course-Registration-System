@@ -35,7 +35,9 @@ public class Communication {
         Object incomingObject = null;
 
         try{
+            System.out.println("before");
             socketOut.writeObject(label);
+            System.out.println("after");
             socketOut.writeObject(object);
             socketOut.flush();
             incomingObject = socketIn.readObject();
