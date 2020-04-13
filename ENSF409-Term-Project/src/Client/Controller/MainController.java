@@ -61,11 +61,11 @@ public class MainController {
         public void actionPerformed(ActionEvent e) {
             String studentID = mainView.getStudentID();
 
-                String student = (String)communication.communicate(studentID, stuCommandNum);
-                if (student == null){
-                    mainView.sendDialogueMessage("There is no student with this ID!");
-                }
-                mainView.setInfo(student);
+            String student = (String)communication.communicate(studentID, stuCommandNum);
+            if (student == null){
+                mainView.sendDialogueMessage("There is no student with this ID!");
+            }
+            mainView.setInfo(student);
 
 
 
