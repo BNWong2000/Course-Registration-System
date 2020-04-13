@@ -3,6 +3,8 @@ package Server.Controller;
 import Server.Model.CourseCatalogue;
 import Server.Model.DBManager;
 import Util.Course;
+import Util.CourseOffering;
+import Util.Registration;
 import Util.Student;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class CommandParser {
             case "4":
                 break;
             case "5":
-                break;
+                return 3;
             default:
                 //invalid input
                 return 0;
@@ -63,7 +65,7 @@ public class CommandParser {
             case "4":
                 break;
             case "5":
-                break;
+                return addCourseToStudent((Student) info.get(0), (Course)info.get(1), (int)info.get(2));
             default:
                 //invalid input
                 return null;
@@ -106,5 +108,31 @@ public class CommandParser {
             }
         }
         return "An Error Occured. Unable to perform this action";
+    }
+
+    private String addCourseToStudent(Student student, Course course, int sectionNum) {
+        String courseName = course.getCourseName();
+        int courseNum = course.getCourseNum();
+        Course theCourse = cat.searchCat(courseName, courseNum);
+        if(theCourse != null){
+            int id = student.getStudentId();
+            if(database.getStudent(id)!= null){
+                Registration temp = new Registration();
+                if(sectionNum > theCourse.getNumOfferings()){
+                    return "Could not perform this action.";
+                }
+                if(theCourse.getCourseOfferingAt(sectionNum-1).isFull()){
+                    theCourse.addOffering(new CourseOffering(sectionNum, 200));
+                    temp.completeRegistration(database.getStudent(id), theCourse.getCourseOfferingAt(sectionNum));
+                    return ("This Section is Full!\n Added student to " + courseName + " " + courseNum + " Section " + (sectionNum+1) + "instead");
+                }else {
+                    temp.completeRegistration(database.getStudent(id), theCourse.getCourseOfferingAt(sectionNum - 1));
+                    return ("Added student to " + courseName + " " + courseNum + " Section " + sectionNum);
+                }
+            }
+        }else{
+            return ("Could not perform this action!. ");
+        }
+        return "An unexpected error occured. ";
     }
 }

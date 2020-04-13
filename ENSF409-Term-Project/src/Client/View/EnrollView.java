@@ -1,9 +1,92 @@
 package Client.View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class EnrollView extends JFrame {
-    //private
+    private JLabel title;
+    private JLabel courseName;
+    private JLabel courseNum;
+    private JLabel studentName;
+    private JLabel studentNum;
+    private JLabel sectionNum;
+    private JButton enroll;
+    private JButton cancel;
+    private JTextField courseNameField;
+    private JTextField courseNumField;
+    private JTextField studentNameField;
+    private JTextField studentNumField;
+    private JTextField sectionNumField;
+    private JPanel northPanel;
+    private JPanel centerPanel;
+    private JPanel southPanel;
+
+
+    public EnrollView(){
+        super();
+        setSize(250,150);
+
+        setLayout(new BorderLayout());
+
+        northPanel = new JPanel();
+        centerPanel = new JPanel();
+        southPanel = new JPanel();
+
+        title = new JLabel("Enroll Student in Course");
+        courseName = new JLabel("Course Name: ");
+        courseNum = new JLabel("Course Number: ");
+        studentName = new JLabel("Student Name: ");
+        studentNum = new JLabel("Student Number: ");
+        sectionNum = new JLabel("Section Number: ");
+        enroll = new JButton("Enroll");
+        cancel = new JButton("Cancel");
+        courseNameField = new JTextField(5);
+        courseNumField = new JTextField(5);
+        studentNameField = new JTextField(5);
+        studentNumField = new JTextField(5);
+        sectionNumField = new JTextField(5);
+
+        northPanel.add(title);
+        GridLayout centerLayout = new GridLayout(3, 4);
+        centerPanel.setLayout(centerLayout);
+        centerPanel.add(courseName);
+        centerPanel.add(courseNameField);
+        centerPanel.add(courseNum);
+        centerPanel.add(courseNumField);
+        centerPanel.add(studentName);
+        centerPanel.add(studentNameField);
+        centerPanel.add(studentNum);
+        centerPanel.add(studentNumField);
+        centerPanel.add(sectionNum);
+        centerPanel.add(sectionNumField);
+        centerPanel.setLayout(centerLayout);
+        southPanel.add(enroll);
+        southPanel.add(cancel);
+
+        getContentPane().add(BorderLayout.NORTH, northPanel);
+        getContentPane().add(BorderLayout.CENTER, centerPanel);
+        getContentPane().add(BorderLayout.SOUTH, southPanel);
+    }
+
+    public void clearTextFields(){
+        studentNameField.setText("");
+        studentNumField.setText("");
+        courseNameField.setText("");
+        courseNumField.setText("");
+        sectionNumField.setText("");
+    }
+
+    public ArrayList<String> getFields(){
+        ArrayList<String> courseInfo = new ArrayList<>();
+        courseInfo.add(studentNameField.getText());
+        courseInfo.add(studentNumField.getText());
+        courseInfo.add(courseNameField.getText());
+        courseInfo.add(courseNumField.getText());
+        courseInfo.add(sectionNumField.getText());
+        return courseInfo;
+    }
 
     /**
      * Display the given message to the user.
@@ -11,5 +94,13 @@ public class EnrollView extends JFrame {
      */
     public void sendDialogueMessage(String message) {
         JOptionPane.showMessageDialog(this, message);
+    }
+
+    public void addEnrollListener(ActionListener a){
+        enroll.addActionListener(a);
+    }
+
+    public void addCancelListener(ActionListener a){
+        cancel.addActionListener(a);
     }
 }
