@@ -57,7 +57,7 @@ public class SearchController {
     public class CancelListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            //searchView.clearTextFields();
+            searchView.clearTextFields();
             searchView.setVisible(false);
 
         }
