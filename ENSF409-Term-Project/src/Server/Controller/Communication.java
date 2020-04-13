@@ -70,7 +70,7 @@ public class Communication {
 
     /**
      * A function used to communicate withe the client.
-     * sends and receives objects from the client. 
+     * sends and receives objects from the client.
      */
     public void communicate() {
         boolean quit = false;
