@@ -37,7 +37,7 @@ public class Communication {
     public CommandParser getParser(){
         return parser;
     }
-    public void communicate() throws IOException, ClassNotFoundException {
+    public void communicate() {
         boolean quit = false;
         int numArgs = 0;
         String commandNum = "";
@@ -51,7 +51,10 @@ public class Communication {
                     objects.add(socketIn.readObject());
                 parser.doCommand(commandNum, objects);
 
-            } catch(IOException e){
+            }
+            catch(ClassNotFoundException e){
+                e.printStackTrace();
+            }catch(IOException e){
                 e.printStackTrace();
             }
 

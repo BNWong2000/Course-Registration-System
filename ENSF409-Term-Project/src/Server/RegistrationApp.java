@@ -186,7 +186,7 @@ public class RegistrationApp {
 		communication.getParser().getCat().createCourseOffering(communication.getParser().getDatabase().getCourseList().get(5), 1, 100);
 		communication.getParser().getCat().createCourseOffering(communication.getParser().getDatabase().getCourseList().get(6), 1, 100);
 		//myRegistrationApp.menu();
-
+		communication.communicate();
 		
 	}
 
