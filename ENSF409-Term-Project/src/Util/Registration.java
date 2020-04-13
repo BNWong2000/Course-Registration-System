@@ -11,14 +11,14 @@ public class Registration implements Serializable {
 	public void completeRegistration (Student st, CourseOffering of) {
 		theStudent = st;
 		theOffering = of;
-		addRegistration ();
+		addRegistration();
 	}
 
 	public boolean isCourse(String courseName, int courseNum){
 		return theOffering.isCourse(courseName, courseNum);
 	}
 	
-	private void addRegistration () {
+	private void addRegistration(){
 		theStudent.addRegistration(this);
 		theOffering.addRegistration(this);
 		theStudent.addOffering(theOffering);
