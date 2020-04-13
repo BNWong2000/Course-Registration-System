@@ -25,18 +25,19 @@ public class MainView extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        northPanel = new JPanel();
-        centerPane = new JScrollPane();
-        southPanel = new JPanel();
-
-        title = new JLabel("Course Registration App");
-
         enroll = new JButton("Enroll in Class");
         remove = new JButton("Remove from Class");
         search = new JButton("Search for Class");
         viewStu = new JButton("View Student");
         viewCat = new JButton("View Course Catalogue");
         info = new JTextArea();
+
+        northPanel = new JPanel();
+        centerPane = new JScrollPane(info);
+        southPanel = new JPanel();
+
+        title = new JLabel("Course Registration App");
+
 
         northPanel.add(title);
         centerPane.add(info);
