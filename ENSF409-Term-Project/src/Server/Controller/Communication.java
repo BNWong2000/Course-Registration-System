@@ -34,18 +34,20 @@ public class Communication {
 
     private Object communicate(){
         boolean quit = false;
-        while(!quit)
-        try {
-            if (socketIn.readObject() != null)
-                parser.parseCommand((String)socketIn.readObject());
-        }
+        while(!quit){
+            try {
+                if (socketIn.readObject() != null)
+                    parser.parseCommand((String)socketIn.readObject());
 
-        catch(IOException e){
-            e.printStackTrace();
-        }
+            }
 
-        catch(ClassNotFoundException e){
-            e.printStackTrace();
+            catch(IOException e){
+                e.printStackTrace();
+            }
+
+            catch(ClassNotFoundException e){
+                e.printStackTrace();
+            }
         }
 
     }
