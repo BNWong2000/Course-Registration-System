@@ -33,7 +33,7 @@ public class Communication {
 
     }
 
-    private Object communicate() throws IOException, ClassNotFoundException {
+    private void communicate() throws IOException, ClassNotFoundException {
         boolean quit = false;
         int numArgs = 0;
         String commandNum = "";
@@ -52,9 +52,10 @@ public class Communication {
                 e.printStackTrace();
             }
 
-        return null;
+        
 
         }
+
 }
 
 
