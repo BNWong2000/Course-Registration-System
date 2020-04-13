@@ -36,7 +36,7 @@ public class CommandParser {
     public void doCommand(String commandNum, ArrayList<Object> info){
         switch(commandNum){
             case "1":
-                
+
                 break;
             case "2":
                 break;

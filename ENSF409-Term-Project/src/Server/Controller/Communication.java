@@ -48,11 +48,9 @@ public class Communication {
                     objects.add(socketIn.readObject());
                 parser.doCommand(commandNum, objects);
 
-        }
-
-        catch(IOException e){
+            } catch(IOException e){
                 e.printStackTrace();
-        }
+            }
 
         return null;
 
