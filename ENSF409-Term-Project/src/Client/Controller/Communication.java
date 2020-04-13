@@ -16,13 +16,14 @@ public class Communication {
 
     private ObjectOutputStream socketOut;
 
-
-
     public Communication(String serverName, int portNumber) {
         try {
             aSocket = new Socket(serverName, portNumber);
-            socketIn = new ObjectInputStream(aSocket.getInputStream());
+            //System.out.println("a");
             socketOut = new ObjectOutputStream((aSocket.getOutputStream()));
+            //System.out.println("b");
+            socketIn = new ObjectInputStream(aSocket.getInputStream());
+            //System.out.println("c");
 
         } catch (IOException e) {
             e.printStackTrace();
