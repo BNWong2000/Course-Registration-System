@@ -1,9 +1,10 @@
 package Util;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CourseOffering {
-	
+public class CourseOffering implements Serializable {
+	private static final long serialVersionUID=3L;
 	private int secNum;
 	private int secCap;
 	private Course theCourse;
