@@ -13,6 +13,7 @@ public class ClientRegistrationApp {
         Communication communicate =  new Communication("localhost", 8099);
         MainController mainController = new MainController(mainView, enrollView, removeView, searchView,communicate);
         SearchController searchController = new SearchController(searchView, communicate);
+        RemoveController removeController = new RemoveController(removeView, communicate);
         mainView.setVisible(true);
     }
 }

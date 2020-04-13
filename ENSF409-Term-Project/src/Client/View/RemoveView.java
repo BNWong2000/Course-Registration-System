@@ -88,7 +88,7 @@ public class RemoveView extends JFrame {
         JOptionPane.showMessageDialog(this, message);
     }
 
-    public void addSearchListener(ActionListener a){
+    public void addRemoveListener(ActionListener a){
         remove.addActionListener(a);
     }
 
