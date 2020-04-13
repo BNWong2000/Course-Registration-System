@@ -66,13 +66,6 @@ public class MainController {
                 mainView.sendDialogueMessage("There is no student with this ID!");
             }
             mainView.setInfo(student);
-
-
-
-
-
-
-
         }
         //
     }
