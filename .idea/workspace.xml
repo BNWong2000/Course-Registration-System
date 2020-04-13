@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/ENSF409-Term-Project.iml" beforeDir="false" />
+>>>>>>> 55eaa466b4d5a0bffd93586c18ebf3dabcf2a8c9
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +95,16 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="239" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1500.960@0.0.1500.960" timestamp="1586730149502" />
-    <state x="531" y="239" key="FileChooserDialogImpl" timestamp="1586741757260">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="680" y="259" key="FileChooserDialogImpl" timestamp="1586815906607">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1586741757260" />
+<<<<<<< HEAD
     <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586816125757">
+=======
+    <state x="680" y="259" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586815906607" />
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586815062134">
+>>>>>>> 55eaa466b4d5a0bffd93586c18ebf3dabcf2a8c9
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586816125757" />
@@ -122,6 +136,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1458" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1586755382586" />
+    <state x="625" y="220" key="NewModule_or_Project.wizard" timestamp="1586815919684">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="625" y="220" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1586815919684" />
     <state x="343" y="217" key="Vcs.Push.Dialog.v2" timestamp="1586754877029">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
