@@ -50,7 +50,6 @@ public class CommandParser {
                 //invalid input
                 return 0;
         }
-        return 0;
     }
 
     public Object doCommand(String commandNum, ArrayList<Object> info){
@@ -70,7 +69,6 @@ public class CommandParser {
                 //invalid input
                 return null;
         }
-        return null;
 
     }
 

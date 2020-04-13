@@ -2,39 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a11d10-271e-4b5f-b0b5-144eb5b000b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/RemoveController$CancelListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/RemoveController$RemoveListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/EnrollController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/EnrollController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$EnrollListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$EnrollListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$RemoveListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$RemoveListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$SearchListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$SearchListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/RemoveController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/RemoveController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/View/RemoveView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Client/View/RemoveView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Util/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/out/production/ENSF409-Term-Project/Util/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/ClientRegistrationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/ClientRegistrationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/RemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/Controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/RemoveView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Client/View/RemoveView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/CommandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Server/Controller/CommandParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ENSF409-Term-Project/src/Util/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/ENSF409-Term-Project/src/Util/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/ClientRegistrationApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewCatListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/Communication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/EnrollController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/EnrollController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/MainController$ViewStuListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/RemoveController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/RemoveController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/Controller/SearchController$CancelListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/RemoveView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/RemoveView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/EnrollView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Client/View/EnrollView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Controller/CommandParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ENSF409-Term-Project/Server/Model/DBManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,22 +98,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="239" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1586741757260" />
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586754444000">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom" timestamp="1586755050157">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586754444000" />
-    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586754444000">
+    <state width="1458" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586755050157" />
+    <state width="1458" height="256" key="GridCell.Tab.0.center" timestamp="1586755050157">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586754444000" />
-    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586754444000">
+    <state width="1458" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586755050157" />
+    <state width="1458" height="256" key="GridCell.Tab.0.left" timestamp="1586755050157">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586754444000" />
-    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586754444000">
+    <state width="1458" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586755050157" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right" timestamp="1586755050157">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586754444000" />
+    <state width="1458" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586755050157" />
     <state width="1458" height="316" key="GridCell.Tab.1.bottom" timestamp="1586749586901">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
