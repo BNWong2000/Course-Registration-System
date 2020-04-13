@@ -40,7 +40,7 @@ public class CommandParser {
             case "3":
                 break;
             case "4":
-                break;
+                return 1;
             case "5":
                 break;
             default:
@@ -60,7 +60,7 @@ public class CommandParser {
             case "3":
                 break;
             case "4":
-                break;
+                return printStudentCourses((int)info.get(0));
             case "5":
                 break;
             default:
@@ -69,6 +69,11 @@ public class CommandParser {
         }
         return null;
 
+    }
+
+    private String printStudentCourses(int id) {
+
+        return database.getStudent(id).registrationListToString();
     }
 
     private Course searchCourseCatalogue(Course course) {

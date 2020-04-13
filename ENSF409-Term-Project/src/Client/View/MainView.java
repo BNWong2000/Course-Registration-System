@@ -31,6 +31,7 @@ public class MainView extends JFrame{
         viewStu = new JButton("View Student");
         viewCat = new JButton("View Course Catalogue");
         info = new JTextArea();
+        info.setEditable(false);
 
         northPanel = new JPanel();
         centerPane = new JScrollPane(info);
@@ -40,7 +41,7 @@ public class MainView extends JFrame{
 
 
         northPanel.add(title);
-        centerPane.add(info);
+        //centerPane.add(info);
         southPanel.add(enroll);
         southPanel.add(remove);
         southPanel.add(search);
@@ -53,6 +54,10 @@ public class MainView extends JFrame{
     }
     public void setInfo(String text) {
         info.setText(text);
+    }
+
+    public String getStudentID() {
+        return JOptionPane.showInputDialog("Enter the Student ID:");
     }
 
     public void addEnrollListener(ActionListener a){
