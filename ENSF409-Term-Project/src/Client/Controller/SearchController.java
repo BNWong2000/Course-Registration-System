@@ -1,7 +1,7 @@
 package Client.Controller;
 
-import Client.Model.Course;
 import Client.View.SearchView;
+import Util.Course;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

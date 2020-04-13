@@ -1,7 +1,7 @@
 package Client.Controller;
 
-import Client.Model.Course;
-import Client.Model.Student;
+import Util.Course;
+import Util.Student;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

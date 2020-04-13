@@ -1,4 +1,5 @@
-package Server.Model;
+package Util;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ public class Student implements Serializable {
 	private int studentId;
 	private ArrayList<CourseOffering> offeringList;
 	private ArrayList<Registration> studentRegList;
-	
+
 	public Student (String studentName, int studentId) {
 		this.setStudentName(studentName);
 		this.setStudentId(studentId);

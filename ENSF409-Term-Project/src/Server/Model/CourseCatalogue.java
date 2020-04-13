@@ -2,6 +2,9 @@ package Server.Model;
 
 import java.util.ArrayList;
 
+import Util.Course;
+import Util.CourseOffering;
+
 public class CourseCatalogue {
 	
 	private ArrayList <Course> courseList;

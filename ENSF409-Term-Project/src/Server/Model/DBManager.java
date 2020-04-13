@@ -1,5 +1,8 @@
 package Server.Model;
 
+import Util.Course;
+import Util.Student;
+
 import java.util.ArrayList;
 
 //This class is simulating a database for our

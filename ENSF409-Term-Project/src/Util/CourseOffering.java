@@ -1,4 +1,4 @@
-package Server.Model;
+package Util;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ public class CourseOffering {
 	private Course theCourse;
 	private ArrayList<Student> studentList;
 	private ArrayList <Registration> offeringRegList;
-	
-	public CourseOffering (int secNum, int secCap) {
+
+	public CourseOffering(int secNum, int secCap) {
 		this.setSecNum(secNum);
 		this.setSecCap(secCap);
 		offeringRegList = new ArrayList <Registration>();

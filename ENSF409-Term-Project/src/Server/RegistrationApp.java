@@ -3,6 +3,10 @@ package Server;
 import Server.Controller.CommandParser;
 import Server.Controller.Communication;
 import Server.Model.*;
+import Util.Course;
+import Util.CourseOffering;
+import Util.Registration;
+import Util.Student;
 
 import java.util.Scanner;
 
@@ -150,7 +154,7 @@ public class RegistrationApp {
 		//RegistrationApp myRegistrationApp = new RegistrationApp();
 		Communication communication = new Communication(8099,new CommandParser());
 		
-		communication.getParser().getDatabase().addStudent( new Student ("A", 1));
+		communication.getParser().getDatabase().addStudent( new Student("A", 1));
 		communication.getParser().getDatabase().addStudent( new Student ("B", 2));
 		communication.getParser().getDatabase().addStudent( new Student ("C", 3));
 		communication.getParser().getDatabase().addStudent( new Student ("D", 4));

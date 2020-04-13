@@ -1,4 +1,5 @@
-package Server.Model;
+package Util;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package Server.Model;
+package Util;
 
 public class Registration {
 	private Student theStudent;

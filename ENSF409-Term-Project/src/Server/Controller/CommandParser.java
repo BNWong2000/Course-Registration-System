@@ -1,9 +1,8 @@
 package Server.Controller;
 
-import Server.Model.Course;
 import Server.Model.CourseCatalogue;
 import Server.Model.DBManager;
-import Server.Model.Student;
+import Util.Course;
 
 import java.util.ArrayList;
 
