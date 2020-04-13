@@ -39,8 +39,6 @@ public class Communication {
         try {
             if (socketIn.readObject() != null)
                 numArgs = parser.parseCommand((String)socketIn.readObject());
-            for (int i = 0; i < numArgs; i++)
-
         }
 
         catch(IOException e){
