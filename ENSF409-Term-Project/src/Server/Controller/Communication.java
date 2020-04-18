@@ -6,14 +6,16 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * A class to Communicate with the client.
  * @author Branden Wong - 30040675
  * @author Savipal Jessel - 30039257
- * @version 1.0
+ * @version 1.1
  */
-public class Communication {
+public class Communication implements Runnable{
 
     /**
      * the client's socket
@@ -31,24 +33,19 @@ public class Communication {
     private ObjectOutputStream socketOut;
 
     /**
-     * the socket for the server.
-     */
-    private ServerSocket serverSocket;
-
-    /**
      * the command parser, which manages commands from the client.
      */
     private CommandParser parser;
 
     /**
      * A constructor for the communication class.
-     * @param port the port to connect to.
+     * @param aSocket the socket which is connecting to the server.
      * @param parser the command parser to use.
      */
-    public Communication(int port, CommandParser parser){
+    public Communication(Socket aSocket, CommandParser parser){
         try {
-            serverSocket = new ServerSocket(port);
-            aSocket = serverSocket.accept();
+            //aSocket = serverSocket.accept();
+            this.aSocket = aSocket;
             System.out.println("The server is now running...");
             socketIn = new ObjectInputStream(aSocket.getInputStream());
             socketOut = new ObjectOutputStream((aSocket.getOutputStream()));
@@ -72,7 +69,7 @@ public class Communication {
      * A function used to communicate withe the client.
      * sends and receives objects from the client.
      */
-    public void communicate() {
+    public synchronized void communicate() {
         boolean quit = false;
         int numArgs = 0;
         String commandNum = "";
@@ -80,24 +77,27 @@ public class Communication {
             try {
                 commandNum = (String) socketIn.readObject();
                 numArgs = parser.parseCommand(commandNum);
-
-
                 ArrayList<Object> objects = new ArrayList<>();
                 for (int i = 0; i < numArgs; i++)
                     objects.add(socketIn.readObject());
                  socketOut.writeObject(parser.doCommand(commandNum, objects));
-
-
             }
             catch(ClassNotFoundException e){
                 e.printStackTrace();
             }catch(IOException e){
                 e.printStackTrace();
             }
-
         }
 
-}
+    }
+
+    /**
+     * The function used to run the thread for this client.
+     */
+    @Override
+    public void run(){
+        communicate();
+    }
 
 
 }
