@@ -46,7 +46,7 @@ public class Communication implements Runnable{
         try {
             //aSocket = serverSocket.accept();
             this.aSocket = aSocket;
-            System.out.println("The server is now running...");
+            System.out.println("A client is connecting to the server...");
             socketIn = new ObjectInputStream(aSocket.getInputStream());
             socketOut = new ObjectOutputStream((aSocket.getOutputStream()));
             this.parser = parser;
@@ -85,7 +85,7 @@ public class Communication implements Runnable{
             catch(ClassNotFoundException e){
                 e.printStackTrace();
             }catch(IOException e){
-                e.printStackTrace();
+                quit = true;
             }
         }
 
