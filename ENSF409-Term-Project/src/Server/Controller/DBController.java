@@ -41,13 +41,6 @@ public class DBController implements DBCredentials {
 
     }
 
-    public void addStudent(Student s){
-        studentDB.insertStudentPreparedStatement(s.getStudentId(),s.getStudentName());
-    }
-
-    public void addCourse(Course s){
-        courseDB.insertCoursePreparedStatement(s.getCourseName(),s.getCourseNum());
-    }
     public void close() {
         try {
             // rs.close();
