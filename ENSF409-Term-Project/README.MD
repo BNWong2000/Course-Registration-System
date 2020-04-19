@@ -6,12 +6,12 @@ How to run our application:
 in the lib folder within our project directory. Note that this varies from IDE to IDE.
 
 2. If you do not already have a mySQL server over localhost port 3306, 
-please create one. Please create a database within your mySQL with the name
+please create one. Please create a database within your mySQL server with the name
 CourseRegistration. Alternatively, go the DBCredentials.java, and change the 
-database name in DB_URL. You should see three tables: student, course, and courseoffering.
+database name in DB_URL. 
 
 
-4. Build the project
+4. Build the project. Note that you should see You should see three tables: student, course, and courseoffering.
 3. Navigate to src/Server/RegistrationApp.java and run the code
     - This will start the server
 4. Navigate to src/Client/ClientRegistrationApp.java and run the code
