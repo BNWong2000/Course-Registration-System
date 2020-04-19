@@ -44,8 +44,7 @@ public class RegistrationApp {
 		courses.add(new Course ("ENSF", 409)); //5
 		courses.add(new Course ("ENCM", 511)); //6
 
-		offerings.add(new CourseOffering( 1, 100));
-		offerings.add(new CourseOffering( 1, 100));
+
 		offerings.add(new CourseOffering( 1, 100));
 		offerings.add(new CourseOffering( 1, 100));
 		offerings.add(new CourseOffering( 1, 100));
@@ -60,8 +59,7 @@ public class RegistrationApp {
 		offerings.add(new CourseOffering( 2, 100));
 		offerings.add(new CourseOffering( 2, 100));
 		offerings.add(new CourseOffering( 2, 100));
-		offerings.add(new CourseOffering( 2, 100));
-		offerings.add(new CourseOffering( 2, 100));
+		
 
 		// If you want to populate the database for the first time or if you've
 		// deleted your tables, uncomment the following lines

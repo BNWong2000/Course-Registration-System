@@ -53,7 +53,7 @@ public class CourseOfferingDB implements DBCredentials {
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, offeringKey);
             pStat.setInt(2, c.getSecNum());
-            pStat.setInt(3, c.getSecNum());
+            pStat.setInt(3, c.getSecCap());
             int rowCount = pStat.executeUpdate();
             System.out.println("row Count = " + rowCount);
             pStat.close();

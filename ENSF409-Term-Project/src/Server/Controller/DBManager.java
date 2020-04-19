@@ -44,11 +44,11 @@ public class DBManager implements DBCredentials {
 		offeringList = new ArrayList<CourseOffering>();
 		initializeConnection();
 		studentDB = new StudentDB(conn);
-		//studentDB.createTable();
+		studentDB.createTable();
 		courseDB = new CourseDB(conn);
-		//courseDB.createTable();
+		courseDB.createTable();
 		offeringDB = new CourseOfferingDB(conn);
-		//offeringDB.createTable();
+		offeringDB.createTable();
 	}
 
 	public ArrayList<CourseOffering> getOfferingList() {
