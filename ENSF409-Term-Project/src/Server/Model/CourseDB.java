@@ -86,8 +86,8 @@ public class CourseDB implements DBCredentials {
             pStat.setInt(1, courseKey);
             pStat.setString(2, c.getCourseName());
             pStat.setInt(3, c.getCourseNum());
-            int rowCount = pStat.executeUpdate();
-            System.out.println("row Count = " + rowCount);
+            pStat.executeUpdate();
+            System.out.println("record inserted into table in database");
             pStat.close();
         } catch (SQLException e) {
             courseKey--;

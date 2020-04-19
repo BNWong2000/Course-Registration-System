@@ -10,11 +10,10 @@ please create one. Please create a database within your mySQL server with the na
 CourseRegistration. Alternatively, go the DBCredentials.java, and change the 
 database name in DB_URL. 
 
-
-4. Build the project. Note that you should see You should see three tables: student, course, and courseoffering.
-3. Navigate to src/Server/RegistrationApp.java and run the code
+3. Build the project. Note that you should see You should see three tables: student, course, and courseoffering.
+4. Navigate to src/Server/RegistrationApp.java and run the code
     - This will start the server
-4. Navigate to src/Client/ClientRegistrationApp.java and run the code
+5. Navigate to src/Client/ClientRegistrationApp.java and run the code
     - This will run the client, and connect to the server
     - You may run as many clients as you want since it is multithreaded
     

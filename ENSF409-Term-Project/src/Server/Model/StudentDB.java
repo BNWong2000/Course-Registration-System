@@ -75,8 +75,8 @@ public class StudentDB implements DBCredentials {
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, s.getStudentId());
             pStat.setString(2, s.getStudentName());
-            int rowCount = pStat.executeUpdate();
-            System.out.println("row Count = " + rowCount);
+            pStat.executeUpdate();
+            System.out.println("record inserted into table in database");
             pStat.close();
         } catch (SQLException e) {
             System.out.println("problem inserting user");
