@@ -14,6 +14,9 @@ import java.util.ArrayList;
 
 /**
  * A class for creating a database to house information about course offerings.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
  */
 public class CourseOfferingDB implements DBCredentials {
 

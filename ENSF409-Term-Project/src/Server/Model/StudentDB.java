@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 /**
  * A class used to generate a database to house information about students.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
  */
 public class StudentDB implements DBCredentials {
 
