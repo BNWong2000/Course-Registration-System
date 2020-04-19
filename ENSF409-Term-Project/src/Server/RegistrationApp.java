@@ -19,7 +19,6 @@ public class RegistrationApp {
 		//RegistrationApp myRegistrationApp = new RegistrationApp();
 		CommandParser parser = new CommandParser();
 		Server server = new Server(8099);
-/*
 		ArrayList<Student> students = new ArrayList<>();
 		ArrayList<Course> courses = new ArrayList<>();
 		ArrayList<CourseOffering> offerings = new ArrayList<>();
@@ -59,13 +58,13 @@ public class RegistrationApp {
 		offerings.add(new CourseOffering( 2, 100));
 		offerings.add(new CourseOffering( 2, 100));
 		offerings.add(new CourseOffering( 2, 100));
-		
+
 
 		// If you want to populate the database for the first time or if you've
 		// deleted your tables, uncomment the following lines
 		parser.getDatabase().getStudentDB().populateStudentDatabase(students);
 		parser.getDatabase().getCourseDB().populateCourseDatabase(courses);
-		parser.getDatabase().getOfferingDB().populateOfferingDatabase(offerings);*/
+		parser.getDatabase().getOfferingDB().populateOfferingDatabase(offerings);
 
 		parser.getDatabase().loadFromDataBase();
 		parser.getCat().readCourseList();
