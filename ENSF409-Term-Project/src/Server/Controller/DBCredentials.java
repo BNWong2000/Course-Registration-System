@@ -3,9 +3,9 @@ package Server.Controller;
 /**
  * An interface to manage the JDBC Driver, URL, and username/password for the mySQL connection
  *
- * @author Savipal Jessel
- * @author Branden Wonh
- * @version 1.0
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 2.0
  *
  */
 public interface DBCredentials {
