@@ -51,7 +51,9 @@ public class CourseCatalogue {
 
 	}
 
-
+	/**
+	 * Creates course offering lists and fills them.
+	 */
 	public void createCourseOfferings () {
 		offeringsList = db.getOfferingList();
 		int j = 0;

@@ -12,23 +12,48 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * A class for creating a database to house information about course offerings.
+ */
 public class CourseOfferingDB implements DBCredentials {
 
-    // Attributes
+    /**
+     * The connection to the database
+     */
     private Connection conn;
+
+    /**
+     * The response from the query when getting information from the database
+     */
     private ResultSet rs;
+
+    /**
+     * A key which tracks the primary ID of the course.
+     */
     private int offeringKey;
 
+    /**
+     * The constructor for course offering database. Creates the connection to the database
+     * @param conn the connection to the database
+     */
     public CourseOfferingDB(Connection conn){
         this.conn = conn;
         offeringKey = 0;
     }
 
+    /**
+     * A function used to populate the database with an arraylist of course offerings.
+     * @param offerings the arraylist of course offerings.
+     */
     public void populateOfferingDatabase(ArrayList<CourseOffering> offerings){
         for (CourseOffering c: offerings)
             insertCourseOfferingPreparedStatement(c);
     }
 
+    /**
+     * A functino used to obtain an arraylist of course offerings from the database.
+     * @return the list of course offerings in the database
+     */
     public ArrayList<CourseOffering> readCourseOfferingPreparedStatement() {
         ArrayList<CourseOffering> offering = new ArrayList<>();
         try {
@@ -46,6 +71,10 @@ public class CourseOfferingDB implements DBCredentials {
         return offering;
     }
 
+    /**
+     * A function used to insert course offerings into the database
+     * @param c the course offering to add to the database
+     */
     public void insertCourseOfferingPreparedStatement(CourseOffering c) {
         try {
             offeringKey++;
@@ -64,6 +93,9 @@ public class CourseOfferingDB implements DBCredentials {
         }
     }
 
+    /**
+     * a function used to generate the SQL table for the course offerings.
+     */
     public void createTable() {
         String sql = "CREATE TABLE COURSEOFFERING " + "(id INTEGER not NULL, " + " number INTEGER not NULL, "
                 + " cap INTEGER not NULL, " + " PRIMARY KEY ( id ))";
