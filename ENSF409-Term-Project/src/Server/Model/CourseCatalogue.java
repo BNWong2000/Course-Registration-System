@@ -2,6 +2,7 @@ package Server.Model;
 
 import java.util.ArrayList;
 
+import Server.Controller.DBManager;
 import Util.Course;
 import Util.CourseOffering;
 
@@ -16,16 +17,19 @@ public class CourseCatalogue {
 	/**
 	 * The list of courses on the catalogue
 	 */
-	private CourseDB courseDB;
+	private ArrayList <Course> courseList;
 
 	/**
 	 * The database to store all the information in
 	 */
 	private DBManager db;
 
-
-	public CourseCatalogue (CourseDB courseDB) {
-		this.courseDB = courseDB;
+	/**
+	 * A constructor for the course catalogue
+	 * @param db the database to retrieve information from.
+	 */
+	public CourseCatalogue (DBManager db) {
+		setDb(db);
 	}
 
 	/**
@@ -36,11 +40,19 @@ public class CourseCatalogue {
 		this.db = db;
 	}
 
+	/**
+	 * loads information from the database.
+	 */
+	public void readCourseList() {
+		// TODO Auto-generated method stub
+		//DBManager db = new DBManager();
+		setCourseList(db.getCourseList());
 
+	}
 
 	/**
 	 * crease a new course offering
-	 * @param c the course
+	 * @param c the coourse
 	 * @param secNum the section number
 	 * @param secCap the max cap of the section.
 	 */
@@ -58,12 +70,14 @@ public class CourseCatalogue {
 	 * @return the course, if it is found, or null if it is not found.
 	 */
 	public Course searchCat (String courseName, int courseNum) {
-		Course course = courseDB.searchCoursePreparedStatement(courseName,courseNum);
-		if (course == null){
-			displayCourseNotFoundError();
-			return null;
+		for (Course c : courseList) {
+			if (courseName.equals(c.getCourseName()) &&
+					courseNum == c.getCourseNum()) {
+				return c;
+			}	
 		}
-		return course;
+		displayCourseNotFoundError();
+		return null;
 	}
 
 	/**
@@ -75,7 +89,21 @@ public class CourseCatalogue {
 		
 	}
 
+	/**
+	 * Gets the list of courses.
+	 * @return the list of courses.
+	 */
+	public ArrayList <Course> getCourseList() {
+		return courseList;
+	}
 
+	/**
+	 * Sets the list of courses
+	 * @param courseList the course list to set to.
+	 */
+	public void setCourseList(ArrayList <Course> courseList) {
+		this.courseList = courseList;
+	}
 
 	/**
 	 * Gets the information about the course catalogue
@@ -84,7 +112,7 @@ public class CourseCatalogue {
 	@Override
 	public String toString () {
 		String st = "All courses in the catalogue: \n";
-		for (Course c : courseDB.getCourses()) {
+		for (Course c : courseList) {
 			st += c;  //This line invokes the toString() method of Course
 			st += "\n";
 		}

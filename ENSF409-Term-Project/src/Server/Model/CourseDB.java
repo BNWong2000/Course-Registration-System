@@ -18,7 +18,7 @@ public class CourseDB implements DBCredentials {
     private Connection conn;
     private ResultSet rs;
     private int courseKey;
-    private ArrayList<Course> courses;
+
 
 
     public CourseDB(Connection conn){
@@ -26,20 +26,12 @@ public class CourseDB implements DBCredentials {
         courseKey = 0;
     }
 
-    public ArrayList<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
-    }
-
     public void populateCourseDatabase(ArrayList<Course> courses){
         for (Course c: courses)
             insertCoursePreparedStatement(c);
     }
 
-    public void readCoursesPreparedStatement() {
+    public ArrayList<Course> readCoursesPreparedStatement() {
         ArrayList<Course> courses = new ArrayList<>();
         try {
             String query = "SELECT * FROM COURSE";
@@ -49,11 +41,11 @@ public class CourseDB implements DBCredentials {
                 courses.add(new Course(rs.getString("name"),rs.getInt("number")));
             }
             pStat.close();
-            setCourses(courses);
         } catch (SQLException e) {
             System.out.println("problem reading Courses");
             e.printStackTrace();
         }
+        return courses;
     }
 
     public void insertCoursePreparedStatement(Course c) {
@@ -74,33 +66,6 @@ public class CourseDB implements DBCredentials {
         }
     }
 
-    public Course searchCoursePreparedStatement(String name, int number) {
-        Course course = null;
-        try {
-            String query= "SELECT * FROM COURSE where name = ? and number = ?";
-            PreparedStatement pStat = conn.prepareStatement(query);
-            pStat.setString(1, name);
-            pStat.setInt(2, number);
-            rs = pStat.executeQuery();
-            while (rs.next()){
-                 course = getCourse(rs.getString("name"),rs.getInt("number"));
-            }
-            pStat.close();
-        } catch (SQLException e) {
-            System.out.println("problem finding course");
-            e.printStackTrace();
-        }
-        return course;
-    }
-
-    public Course getCourse(String name, int number){
-        for(int i = 0; i < courses.size(); ++i){
-            if(courses.get(i).getCourseName().equals(name) && courses.get(i).getCourseNum() == number ){
-                return courses.get(i);
-            }
-        }
-        return null;
-    }
     public void createTable() {
         String sql = "CREATE TABLE COURSE " + "(id INTEGER not NULL, " + "name VARCHAR(255), "
                 + " number INTEGER not NULL, " + " PRIMARY KEY ( id ))";
