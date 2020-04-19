@@ -21,13 +21,12 @@ public class StudentDB implements DBCredentials {
 
 
 
-    public void insertUserPreparedStatement(int id, String fName, String lName) {
+    public void insertStudentPreparedStatement(int id, String Name) {
         try {
             String query = "INSERT INTO STUDENT (ID,first,last) values(?,?,?)";
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, id);
-            pStat.setString(2, fName);
-            pStat.setString(3, lName);
+            pStat.setString(2, Name);
             int rowCount = pStat.executeUpdate();
             System.out.println("row Count = " + rowCount);
             pStat.close();
@@ -38,8 +37,8 @@ public class StudentDB implements DBCredentials {
     }
 
     public void createTable() {
-        String sql = "CREATE TABLE STUDENT " + "(id INTEGER not NULL, " + " first VARCHAR(255), "
-                + " last VARCHAR(255), " + " PRIMARY KEY ( id ))";
+        String sql = "CREATE TABLE STUDENT " + "(id INTEGER not NULL, " + " Name VARCHAR(255), "
+                 + " PRIMARY KEY ( id ))";
 
         try {
             Statement stmt = conn.createStatement(); // construct a statement

@@ -3,7 +3,7 @@ package Server.Controller;
 
 
 import Server.Model.*;
-
+import Util.*;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -23,7 +23,7 @@ public class DBController implements DBCredentials {
         studentDB = new StudentDB(conn);
         //studentDB.createTable();
         courseDB = new CourseDB(conn);
-        courseDB.createTable();
+        //courseDB.createTable();
 
     }
 
@@ -39,6 +39,14 @@ public class DBController implements DBCredentials {
             e.printStackTrace();
         }
 
+    }
+
+    public void addStudent(Student s){
+        studentDB.insertStudentPreparedStatement(s.getStudentId(),s.getStudentName());
+    }
+
+    public void addCourse(Course s){
+        courseDB.insertCoursePreparedStatement(s.getCourseName(),s.getCourseNum());
     }
     public void close() {
         try {

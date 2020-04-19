@@ -17,6 +17,8 @@ import java.util.ArrayList;
  */
 public class CommandParser {
 
+    private DBController dbController;
+
     /**
      * the course catalogue to read from
      */
@@ -32,6 +34,7 @@ public class CommandParser {
      */
     public CommandParser(){
         database = new DBManager();
+        dbController = new DBController();
         cat = new CourseCatalogue (database);
     }
 

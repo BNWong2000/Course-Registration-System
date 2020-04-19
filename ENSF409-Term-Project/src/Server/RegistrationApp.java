@@ -16,7 +16,6 @@ import Util.Student;
 public class RegistrationApp {
 	public static void main (String [] args) {
 		//RegistrationApp myRegistrationApp = new RegistrationApp();
-		DBController dbController = new DBController();
 		CommandParser parser = new CommandParser();
 		Server server = new Server(8099);
 		
