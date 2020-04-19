@@ -12,25 +12,48 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * A class used to generate a database to house information on courses
+ */
 public class CourseDB implements DBCredentials {
 
-    // Attributes
+    /**
+     * The connection to the database
+     */
     private Connection conn;
+
+    /**
+     * The response from the query when getting information from the database
+     */
     private ResultSet rs;
+
+    /**
+     * A key which tracks the primary ID of the course.
+     */
     private int courseKey;
 
-
-
+    /**
+     * A constructor for the course database class.
+     * @param conn the connection to the database
+     */
     public CourseDB(Connection conn){
         this.conn = conn;
         courseKey = 0;
     }
 
+    /**
+     * A function which populates the course database with an arraylist of courses
+     * @param courses the arraylist of courses to fill the database with
+     */
     public void populateCourseDatabase(ArrayList<Course> courses){
         for (Course c: courses)
             insertCoursePreparedStatement(c);
     }
 
+    /**
+     * A function which fills an arraylist of courses with all the courses from the database
+     * @return an arraylist of courses from the database
+     */
     public ArrayList<Course> readCoursesPreparedStatement() {
         ArrayList<Course> courses = new ArrayList<>();
         try {
@@ -48,6 +71,10 @@ public class CourseDB implements DBCredentials {
         return courses;
     }
 
+    /**
+     * A function which adds a course into the database
+     * @param c the course to add to the database
+     */
     public void insertCoursePreparedStatement(Course c) {
         try {
             courseKey++;
@@ -66,6 +93,9 @@ public class CourseDB implements DBCredentials {
         }
     }
 
+    /**
+     * A function which creates a SQL table for the courses.
+     */
     public void createTable() {
         String sql = "CREATE TABLE COURSE " + "(id INTEGER not NULL, " + "name VARCHAR(255), "
                 + " number INTEGER not NULL, " + " PRIMARY KEY ( id ))";
