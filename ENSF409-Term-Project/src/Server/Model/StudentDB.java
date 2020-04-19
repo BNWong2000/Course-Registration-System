@@ -21,19 +21,6 @@ public class StudentDB implements DBCredentials {
 
 
 
-    public void insertUser() {
-        try {
-            Statement stmt = conn.createStatement();
-            String insert = "INSERT INTO STUDENT (ID, first, last) values (12, 'Joe','Jones')";
-            int rowCount = stmt.executeUpdate(insert);
-            System.out.println("row Count = " + rowCount);
-            stmt.close();
-        } catch (SQLException e) {
-            System.out.println("problem inserting user");
-            e.printStackTrace();
-        }
-    }
-
     public void insertUserPreparedStatement(int id, String fName, String lName) {
         try {
             String query = "INSERT INTO STUDENT (ID,first,last) values(?,?,?)";

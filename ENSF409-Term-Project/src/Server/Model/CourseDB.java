@@ -14,23 +14,27 @@ public class CourseDB implements DBCredentials {
     // Attributes
     private Connection conn;
     private ResultSet rs;
+    private int courseKey;
 
     public CourseDB(Connection conn){
         this.conn = conn;
+        courseKey = 0;
     }
 
 
-    public void insertCoursePreparedStatement(int id, String cName, String cNumber) {
+    public void insertCoursePreparedStatement(String cName, int cNumber) {
         try {
-            String query = "INSERT INTO COURSE (ID,Name,Number) values(?,?,?)";
+            courseKey++;
+            String query = "INSERT INTO COURSE (id,Name,Number) values(?,?,?)";
             PreparedStatement pStat = conn.prepareStatement(query);
-            pStat.setInt(1, id);
+            pStat.setInt(1, courseKey);
             pStat.setString(2, cName);
-            pStat.setString(3, cName);
+            pStat.setInt(3, cNumber);
             int rowCount = pStat.executeUpdate();
             System.out.println("row Count = " + rowCount);
             pStat.close();
         } catch (SQLException e) {
+            courseKey--;
             System.out.println("problem inserting course");
             e.printStackTrace();
         }
@@ -38,7 +42,7 @@ public class CourseDB implements DBCredentials {
 
     public void createTable() {
         String sql = "CREATE TABLE COURSE " + "(id INTEGER not NULL, " + " Name VARCHAR(255), "
-                + " Number VARCHAR(255), " + " PRIMARY KEY ( id ))";
+                + " Number INTEGER not NULL, " + " PRIMARY KEY ( id ))";
 
         try {
             Statement stmt = conn.createStatement(); // construct a statement

@@ -2,7 +2,7 @@ package Server.Controller;
 
 
 
-import Server.Model.StudentDB;
+import Server.Model.*;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -16,11 +16,14 @@ public class DBController implements DBCredentials {
     private Connection conn;
     private ResultSet rs;
     private StudentDB studentDB;
+    private CourseDB courseDB;
 
     public DBController(){
         initializeConnection();
         studentDB = new StudentDB(conn);
-
+        //studentDB.createTable();
+        courseDB = new CourseDB(conn);
+        courseDB.createTable();
 
     }
 
