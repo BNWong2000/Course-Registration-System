@@ -52,11 +52,9 @@ public class CourseCatalogue {
 
 
 	public void createCourseOfferings (ArrayList<CourseOffering> offerings) {
-		for (int i = 0; i < courseList.size(); i++)
+		for (int i = 0, j = 0; i < courseList.size(); i++,j++)
 		if (courseList.get(i) != null) { ;
 			courseList.get(i).addOffering(offerings.get(i));
-			courseList.get(i).addOffering(offerings.get(i+1));
-		}
 	}
 
 	/**
