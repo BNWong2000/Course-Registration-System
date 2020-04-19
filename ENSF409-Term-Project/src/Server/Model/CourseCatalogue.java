@@ -50,16 +50,12 @@ public class CourseCatalogue {
 
 	}
 
-	/**
-	 * crease a new course offering
-	 * @param c the coourse
-	 * @param secNum the section number
-	 * @param secCap the max cap of the section.
-	 */
-	public void createCourseOffering (Course c, int secNum, int secCap) {
-		if (c!= null) {
-			CourseOffering theOffering = new CourseOffering (secNum, secCap);
-			c.addOffering(theOffering);
+
+	public void createCourseOfferings (ArrayList<CourseOffering> offerings) {
+		for (int i = 0; i < courseList.size(); i++)
+		if (courseList.get(i) != null) { ;
+			courseList.get(i).addOffering(offerings.get(i));
+			courseList.get(i).addOffering(offerings.get(i+1));
 		}
 	}
 

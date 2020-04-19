@@ -1,8 +1,10 @@
 package Server.Controller;
 
 import Server.Model.CourseDB;
+import Server.Model.CourseOfferingDB;
 import Server.Model.StudentDB;
 import Util.Course;
+import Util.CourseOffering;
 import Util.Student;
 
 import java.sql.*;
@@ -20,6 +22,7 @@ public class DBManager implements DBCredentials {
 	private ResultSet rs;
 	private StudentDB studentDB;
 	private CourseDB courseDB;
+	private CourseOfferingDB offeringDB;
 
 	/**
 	 * the list of courses that will be loaded from the mySQL database
@@ -31,17 +34,29 @@ public class DBManager implements DBCredentials {
 	 */
 	private ArrayList <Student> studentList;
 
+	private ArrayList <CourseOffering> offeringList;
 	/**
 	 * A constructor for the database manager.
 	 */
 	public DBManager () {
 		courseList = new ArrayList<Course>();
 		studentList = new ArrayList<Student>();
+		offeringList = new ArrayList<CourseOffering>();
 		initializeConnection();
 		studentDB = new StudentDB(conn);
 		studentDB.createTable();
 		courseDB = new CourseDB(conn);
 		courseDB.createTable();
+		offeringDB = new CourseOfferingDB(conn);
+		offeringDB.createTable();
+	}
+
+	public ArrayList<CourseOffering> getOfferingList() {
+		return offeringList;
+	}
+
+	public void setOfferingList(ArrayList<CourseOffering> offeringList) {
+		this.offeringList = offeringList;
 	}
 
 	/**
@@ -89,6 +104,14 @@ public class DBManager implements DBCredentials {
 		courseList = courseDB.readCoursesPreparedStatement();
 		studentList = studentDB.readStudentsPreparedStatement();
 
+	}
+
+	public CourseOfferingDB getOfferingDB() {
+		return offeringDB;
+	}
+
+	public void setOfferingDB(CourseOfferingDB offeringDB) {
+		this.offeringDB = offeringDB;
 	}
 
 	public StudentDB getStudentDB() {

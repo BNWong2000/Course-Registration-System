@@ -1,6 +1,8 @@
 package Server.Model;
 
 import Server.Controller.DBCredentials;
+import Util.Course;
+import Util.CourseOffering;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -8,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class CourseOfferingDB implements DBCredentials {
 
@@ -21,15 +24,36 @@ public class CourseOfferingDB implements DBCredentials {
         offeringKey = 0;
     }
 
+    public void populateOfferingDatabase(ArrayList<CourseOffering> offerings){
+        for (CourseOffering c: offerings)
+            insertCourseOfferingPreparedStatement(c);
+    }
 
-    public void insertCourseOfferingPreparedStatement(int sNum, int sCap) {
+    public ArrayList<Course> readCourseOfferingPreparedStatement() {
+        ArrayList<Course> courses = new ArrayList<>();
+        try {
+            String query = "SELECT * FROM COURSEOFFERING";
+            PreparedStatement pStat = conn.prepareStatement(query);
+            rs = pStat.executeQuery();
+            while (rs.next()) {
+                courses.add(new Course(rs.getString("number"),rs.getInt("cap")));
+            }
+            pStat.close();
+        } catch (SQLException e) {
+            System.out.println("problem reading Course Offerings");
+            e.printStackTrace();
+        }
+        return courses;
+    }
+
+    public void insertCourseOfferingPreparedStatement(CourseOffering c) {
         try {
             offeringKey++;
-            String query = "INSERT INTO COURSEOFFERING (id,Number,Cap) values(?,?,?)";
+            String query = "INSERT INTO COURSEOFFERING (id,number,cap) values(?,?,?)";
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, offeringKey);
-            pStat.setInt(2, sNum);
-            pStat.setInt(3, sCap);
+            pStat.setInt(2, c.getSecNum());
+            pStat.setInt(3, c.getSecNum());
             int rowCount = pStat.executeUpdate();
             System.out.println("row Count = " + rowCount);
             pStat.close();
@@ -41,8 +65,8 @@ public class CourseOfferingDB implements DBCredentials {
     }
 
     public void createTable() {
-        String sql = "CREATE TABLE COURSEOFFERING " + "(id INTEGER not NULL, " + " Number INTEGER not NULL, "
-                + " Cap INTEGER not NULL, " + " PRIMARY KEY ( id ))";
+        String sql = "CREATE TABLE COURSEOFFERING " + "(id INTEGER not NULL, " + " number INTEGER not NULL, "
+                + " cap INTEGER not NULL, " + " PRIMARY KEY ( id ))";
 
         try {
             Statement stmt = conn.createStatement(); // construct a statement
