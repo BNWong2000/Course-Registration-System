@@ -27,6 +27,22 @@ public class DBController implements DBCredentials {
 
     }
 
+    public StudentDB getStudentDB() {
+        return studentDB;
+    }
+
+    public void setStudentDB(StudentDB studentDB) {
+        this.studentDB = studentDB;
+    }
+
+    public CourseDB getCourseDB() {
+        return courseDB;
+    }
+
+    public void setCourseDB(CourseDB courseDB) {
+        this.courseDB = courseDB;
+    }
+
     public void initializeConnection() {
         try {
             // Register JDBC driver
