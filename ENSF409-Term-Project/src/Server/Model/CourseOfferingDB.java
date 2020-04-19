@@ -29,21 +29,21 @@ public class CourseOfferingDB implements DBCredentials {
             insertCourseOfferingPreparedStatement(c);
     }
 
-    public ArrayList<Course> readCourseOfferingPreparedStatement() {
-        ArrayList<Course> courses = new ArrayList<>();
+    public ArrayList<CourseOffering> readCourseOfferingPreparedStatement() {
+        ArrayList<CourseOffering> offering = new ArrayList<>();
         try {
             String query = "SELECT * FROM COURSEOFFERING";
             PreparedStatement pStat = conn.prepareStatement(query);
             rs = pStat.executeQuery();
             while (rs.next()) {
-                courses.add(new Course(rs.getString("number"),rs.getInt("cap")));
+                offering.add(new CourseOffering(rs.getInt("number"),rs.getInt("cap")));
             }
             pStat.close();
         } catch (SQLException e) {
             System.out.println("problem reading Course Offerings");
             e.printStackTrace();
         }
-        return courses;
+        return offering;
     }
 
     public void insertCourseOfferingPreparedStatement(CourseOffering c) {

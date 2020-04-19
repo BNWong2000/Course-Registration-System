@@ -68,6 +68,7 @@ public class RegistrationApp {
 		parser.getDatabase().getStudentDB().populateStudentDatabase(students);
 		parser.getDatabase().getCourseDB().populateCourseDatabase(courses);
 		parser.getDatabase().getOfferingDB().populateOfferingDatabase(offerings);*/
+
 		parser.getDatabase().loadFromDataBase();
 		parser.getCat().readCourseList();
 		parser.getCat().createCourseOfferings();

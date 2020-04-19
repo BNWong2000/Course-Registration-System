@@ -44,11 +44,11 @@ public class DBManager implements DBCredentials {
 		offeringList = new ArrayList<CourseOffering>();
 		initializeConnection();
 		studentDB = new StudentDB(conn);
-		studentDB.createTable();
+		//studentDB.createTable();
 		courseDB = new CourseDB(conn);
-		courseDB.createTable();
+		//courseDB.createTable();
 		offeringDB = new CourseOfferingDB(conn);
-		offeringDB.createTable();
+		//offeringDB.createTable();
 	}
 
 	public ArrayList<CourseOffering> getOfferingList() {
@@ -103,6 +103,7 @@ public class DBManager implements DBCredentials {
 		// TODO Auto-generated method stub
 		courseList = courseDB.readCoursesPreparedStatement();
 		studentList = studentDB.readStudentsPreparedStatement();
+		offeringList = offeringDB.readCourseOfferingPreparedStatement();
 
 	}
 
