@@ -52,11 +52,11 @@ public class CourseCatalogue {
 
 
 	public void createCourseOfferings (ArrayList<CourseOffering> offerings) {
-		for (int i = 0, j = 0; i < courseList.size(); i++,j++)
-		if (courseList.get(i) != null) { ;
-			courseList.get(i).addOffering(offerings.get(i));
+		int j = 0;
+		for (int i = 0; i < offerings.size(); i++,j++){
+			
+		}
 	}
-
 	/**
 	 * searches the catalogue for a given course
 	 * @param courseName the name of the course to search for
