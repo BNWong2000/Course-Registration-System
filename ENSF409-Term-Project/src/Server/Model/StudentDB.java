@@ -9,28 +9,45 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.ArrayList;
 
-
+/**
+ * A class used to generate a database to house information about students.
+ * @author Branden Wong - 30040675
+ * @author Savipal Jessel - 30039257
+ * @version 1.0
+ */
 public class StudentDB implements DBCredentials {
 
-    // Attributes
+    /**
+     * The connection to the database
+     */
     private Connection conn;
 
-
-
+    /**
+     * The response from the query when getting information from the database
+     */
     private ResultSet rs;
 
-
+    /**
+     * A constructor for the student database.
+     * @param conn the connection to the database
+     */
     public StudentDB(Connection conn){
         this.conn = conn;
     }
 
-
-
+    /**
+     * A function which adds an arraylist of students to the database
+     * @param students the arraylist of students to add to the database
+     */
     public void populateStudentDatabase(ArrayList<Student> students){
         for (Student s: students)
             insertStudentPreparedStatement(s);
     }
 
+    /**
+     * A function which query's the database for students, and returns a list of students from the database.
+     * @return the list of students obtained from the database.
+     */
     public ArrayList<Student> readStudentsPreparedStatement() {
         ArrayList<Student> students = new ArrayList<>();
         try {
@@ -48,7 +65,10 @@ public class StudentDB implements DBCredentials {
         return students;
     }
 
-
+    /**
+     * A function which adds a student to the database
+     * @param s the student to add to the database
+     */
     public void insertStudentPreparedStatement(Student s) {
         try {
             String query = "INSERT INTO STUDENT (ID,name) values(?,?)";
@@ -64,7 +84,9 @@ public class StudentDB implements DBCredentials {
         }
     }
 
-
+    /**
+     * A function which creates a table in the database for students
+     */
     public void createTable() {
         String sql = "CREATE TABLE STUDENT " + "(id INTEGER not NULL, " + "name VARCHAR(255), "
                  + " PRIMARY KEY ( id ))";
