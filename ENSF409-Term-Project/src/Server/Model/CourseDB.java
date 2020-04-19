@@ -18,7 +18,7 @@ public class CourseDB implements DBCredentials {
     private Connection conn;
     private ResultSet rs;
     private int courseKey;
-    private ArrayList<Course> Courses;
+    private ArrayList<Course> courses;
 
 
     public CourseDB(Connection conn){
@@ -27,14 +27,14 @@ public class CourseDB implements DBCredentials {
     }
 
     public ArrayList<Course> getCourses() {
-        return Courses;
+        return courses;
     }
 
     public void setCourses(ArrayList<Course> courses) {
-        Courses = courses;
+        this.courses = courses;
     }
 
-    public void loadCourseDatabase(ArrayList<Course> courses){
+    public void populateCourseDatabase(ArrayList<Course> courses){
         for (Course c: courses)
             insertCoursePreparedStatement(c);
     }
@@ -46,7 +46,7 @@ public class CourseDB implements DBCredentials {
             PreparedStatement pStat = conn.prepareStatement(query);
             rs = pStat.executeQuery();
             while (rs.next()) {
-                courses.add(new Course(rs.getString("Name"),rs.getInt("Number")));
+                courses.add(new Course(rs.getString("name"),rs.getInt("number")));
             }
             pStat.close();
             setCourses(courses);
@@ -59,7 +59,7 @@ public class CourseDB implements DBCredentials {
     public void insertCoursePreparedStatement(Course c) {
         try {
             courseKey++;
-            String query = "INSERT INTO COURSE (id,Name,Number) values(?,?,?)";
+            String query = "INSERT INTO COURSE (id,name,number) values(?,?,?)";
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, courseKey);
             pStat.setString(2, c.getCourseName());
@@ -74,9 +74,36 @@ public class CourseDB implements DBCredentials {
         }
     }
 
+    public Course searchCoursePreparedStatement(String name, int number) {
+        Course course = null;
+        try {
+            String query= "SELECT * FROM COURSE where name = ? and number = ?";
+            PreparedStatement pStat = conn.prepareStatement(query);
+            pStat.setString(1, name);
+            pStat.setInt(2, number);
+            rs = pStat.executeQuery();
+            while (rs.next()){
+                 course = getCourse(rs.getString("name"),rs.getInt("number"));
+            }
+            pStat.close();
+        } catch (SQLException e) {
+            System.out.println("problem finding course");
+            e.printStackTrace();
+        }
+        return course;
+    }
+
+    public Course getCourse(String name, int number){
+        for(int i = 0; i < courses.size(); ++i){
+            if(courses.get(i).getCourseName().equals(name) && courses.get(i).getCourseNum() == number ){
+                return courses.get(i);
+            }
+        }
+        return null;
+    }
     public void createTable() {
-        String sql = "CREATE TABLE COURSE " + "(id INTEGER not NULL, " + " Name VARCHAR(255), "
-                + " Number INTEGER not NULL, " + " PRIMARY KEY ( id ))";
+        String sql = "CREATE TABLE COURSE " + "(id INTEGER not NULL, " + "name VARCHAR(255), "
+                + " number INTEGER not NULL, " + " PRIMARY KEY ( id ))";
 
         try {
             Statement stmt = conn.createStatement(); // construct a statement

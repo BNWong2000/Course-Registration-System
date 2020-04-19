@@ -16,20 +16,16 @@ public class CourseCatalogue {
 	/**
 	 * The list of courses on the catalogue
 	 */
-	private ArrayList <Course> courseList;
+	private CourseDB courseDB;
 
 	/**
 	 * The database to store all the information in
 	 */
 	private DBManager db;
 
-	/**
-	 * A constructor for the course catalogue
-	 * @param db the database to retrieve information from.
-	 */
-	public CourseCatalogue (DBManager db) {
-		setDb(db);
-		loadFromDataBase ();
+
+	public CourseCatalogue (CourseDB courseDB) {
+		this.courseDB = courseDB;
 	}
 
 	/**
@@ -40,15 +36,7 @@ public class CourseCatalogue {
 		this.db = db;
 	}
 
-	/**
-	 * loads information from the database.
-	 */
-	private void loadFromDataBase() {
-		// TODO Auto-generated method stub
-		//DBManager db = new DBManager();
-		setCourseList(db.readFromDataBase());
-		
-	}
+
 
 	/**
 	 * crease a new course offering
@@ -70,14 +58,12 @@ public class CourseCatalogue {
 	 * @return the course, if it is found, or null if it is not found.
 	 */
 	public Course searchCat (String courseName, int courseNum) {
-		for (Course c : courseList) {
-			if (courseName.equals(c.getCourseName()) &&
-					courseNum == c.getCourseNum()) {
-				return c;
-			}	
+		Course course = courseDB.searchCoursePreparedStatement(courseName,courseNum);
+		if (course == null){
+			displayCourseNotFoundError();
+			return null;
 		}
-		displayCourseNotFoundError();
-		return null;
+		return course;
 	}
 
 	/**
@@ -89,21 +75,7 @@ public class CourseCatalogue {
 		
 	}
 
-	/**
-	 * Gets the list of courses.
-	 * @return the list of courses.
-	 */
-	public ArrayList <Course> getCourseList() {
-		return courseList;
-	}
 
-	/**
-	 * Sets the list of courses
-	 * @param courseList the course list to set to.
-	 */
-	public void setCourseList(ArrayList <Course> courseList) {
-		this.courseList = courseList;
-	}
 
 	/**
 	 * Gets the information about the course catalogue
@@ -112,7 +84,7 @@ public class CourseCatalogue {
 	@Override
 	public String toString () {
 		String st = "All courses in the catalogue: \n";
-		for (Course c : courseList) {
+		for (Course c : courseDB.getCourses()) {
 			st += c;  //This line invokes the toString() method of Course
 			st += "\n";
 		}

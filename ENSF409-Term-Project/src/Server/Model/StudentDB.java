@@ -32,7 +32,9 @@ public class StudentDB implements DBCredentials {
         this.students = students;
     }
 
-    public void loadStudentDatabase(ArrayList<Student> students){
+
+
+    public void populateStudentDatabase(ArrayList<Student> students){
         for (Student s: students)
             insertStudentPreparedStatement(s);
     }
@@ -44,7 +46,7 @@ public class StudentDB implements DBCredentials {
             PreparedStatement pStat = conn.prepareStatement(query);
             rs = pStat.executeQuery();
             while (rs.next()) {
-                students.add(new Student(rs.getString("Name"),rs.getInt("id")));
+                students.add(new Student(rs.getString("name"),rs.getInt("id")));
             }
             pStat.close();
             setStudents(students);
@@ -57,7 +59,7 @@ public class StudentDB implements DBCredentials {
 
     public void insertStudentPreparedStatement(Student s) {
         try {
-            String query = "INSERT INTO STUDENT (ID,Name) values(?,?)";
+            String query = "INSERT INTO STUDENT (ID,name) values(?,?)";
             PreparedStatement pStat = conn.prepareStatement(query);
             pStat.setInt(1, s.getStudentId());
             pStat.setString(2, s.getStudentName());
@@ -78,7 +80,7 @@ public class StudentDB implements DBCredentials {
             pStat.setInt(1, id);
             rs = pStat.executeQuery();
             while (rs.next()){
-                student = new Student(rs.getString("Name"),id);
+                student = getStudent(rs.getInt("id"));
             }
             pStat.close();
         } catch (SQLException e) {
@@ -88,8 +90,35 @@ public class StudentDB implements DBCredentials {
         return student;
     }
 
+    public Student searchStudentPreparedStatement(int id, String name) {
+        Student student = null;
+        try {
+            String query= "SELECT * FROM STUDENT where id= ? and name= ?";
+            PreparedStatement pStat = conn.prepareStatement(query);
+            pStat.setInt(1, id);
+            pStat.setString(2, name);
+            rs = pStat.executeQuery();
+            while (rs.next()){
+                student = getStudent(rs.getInt("id"));
+            }
+            pStat.close();
+        } catch (SQLException e) {
+            System.out.println("problem inserting user");
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    public Student getStudent(int id){
+        for(int i = 0; i < students.size(); ++i){
+            if(students.get(i).getStudentId() == id){
+                return students.get(i);
+            }
+        }
+        return null;
+    }
     public void createTable() {
-        String sql = "CREATE TABLE STUDENT " + "(id INTEGER not NULL, " + " Name VARCHAR(255), "
+        String sql = "CREATE TABLE STUDENT " + "(id INTEGER not NULL, " + "name VARCHAR(255), "
                  + " PRIMARY KEY ( id ))";
 
         try {

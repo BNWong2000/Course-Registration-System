@@ -35,7 +35,11 @@ public class CommandParser {
     public CommandParser(){
         database = new DBManager();
         dbController = new DBController();
-        cat = new CourseCatalogue (database);
+        cat = new CourseCatalogue (dbController.getCourseDB());
+    }
+
+    public DBController getDbController() {
+        return dbController;
     }
 
     /**
@@ -118,9 +122,10 @@ public class CommandParser {
      */
     private String printStudentCourses(int id) {
 
-        if (database.getStudent(id) == null)
+        if (dbController.getStudentDB().searchStudentPreparedStatement(id) == null)
             return null;
-        return (database.getStudent(id)  + database.getStudent(id).registrationListToString());
+        return (dbController.getStudentDB().searchStudentPreparedStatement(id) +
+                dbController.getStudentDB().searchStudentPreparedStatement(id).registrationListToString());
     }
 
     /**
@@ -148,17 +153,18 @@ public class CommandParser {
     private String removeCourseFromStudent(Student student, Course course) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
-        if(database.getStudent(student.getStudentId()) == null || database.getStudent(student.getStudentName()) == null || database.getStudent(student.getStudentName()).getStudentId() != student.getStudentId()){
+        if(dbController.getStudentDB().searchStudentPreparedStatement(student.getStudentId(),student.getStudentName()) == null){
             return "Student is not in our system!";
         }else{
-            student = database.getStudent(student.getStudentId());
+            student = dbController.getStudentDB().searchStudentPreparedStatement(student.getStudentId(),student.getStudentName());
         }
         Course theCourse = cat.searchCat(courseName, courseNum);
         if(theCourse!= null){
             int id = student.getStudentId();
-            if(database.getStudent(id) != null){
+            String name = student.getStudentName();
+            if(dbController.getStudentDB().searchStudentPreparedStatement(id,name) != null){
                 if(student.isInCourse(courseName, courseNum)){
-                    database.getStudent(id).removeFrom(courseName, courseNum);
+                    dbController.getStudentDB().searchStudentPreparedStatement(id,name).removeFrom(courseName, courseNum);
                     return "Removed student from " + courseName + " " + courseNum;
                 }else{
                     return "Student is not in this course. ";
@@ -167,7 +173,7 @@ public class CommandParser {
                 return "Could not perform this action!. ";
             }
         }
-        return "An Error Occured. Unable to perform this action";
+        return "An Error Occurred. Unable to perform this action";
     }
 
     /**
@@ -180,10 +186,10 @@ public class CommandParser {
     private String addCourseToStudent(Student student, Course course, int sectionNum) {
         String courseName = course.getCourseName();
         int courseNum = course.getCourseNum();
-        if(database.getStudent(student.getStudentId()) == null || database.getStudent(student.getStudentName()) == null || database.getStudent(student.getStudentName()).getStudentId() != student.getStudentId()){
+        if(dbController.getStudentDB().searchStudentPreparedStatement(student.getStudentId(),student.getStudentName()) == null){
             return "Student is not in our system!";
         }else{
-            student = database.getStudent(student.getStudentId());
+            student = dbController.getStudentDB().searchStudentPreparedStatement(student.getStudentId(), student.getStudentName());
         }
         if(student.isInCourse(courseName, courseNum)){
             return "Student is already in this course.";
@@ -191,17 +197,18 @@ public class CommandParser {
         Course theCourse = cat.searchCat(courseName, courseNum);
         if(theCourse != null){
             int id = student.getStudentId();
-            if(database.getStudent(id)!= null){
+            String name = student.getStudentName();
+            if(dbController.getStudentDB().searchStudentPreparedStatement(id,name)!= null){
                 Registration temp = new Registration();
                 if(sectionNum > theCourse.getNumOfferings()){
                     return "Could not perform this action.";
                 }
                 if(theCourse.getCourseOfferingAt(sectionNum-1).isFull()){
                     theCourse.addOffering(new CourseOffering(sectionNum, 200));
-                    temp.completeRegistration(database.getStudent(id), theCourse.getCourseOfferingAt(sectionNum));
+                    temp.completeRegistration(dbController.getStudentDB().searchStudentPreparedStatement(id,name), theCourse.getCourseOfferingAt(sectionNum));
                     return ("This Section is Full!\n Added student to " + courseName + " " + courseNum + " Section " + (sectionNum+1) + "instead");
                 }else {
-                    temp.completeRegistration(database.getStudent(id), theCourse.getCourseOfferingAt(sectionNum - 1));
+                    temp.completeRegistration(dbController.getStudentDB().searchStudentPreparedStatement(id,name), theCourse.getCourseOfferingAt(sectionNum - 1));
                     return ("Added student to " + courseName + " " + courseNum + " Section " + sectionNum);
                 }
             }
