@@ -19,7 +19,7 @@ public class RegistrationApp {
 		//RegistrationApp myRegistrationApp = new RegistrationApp();
 		CommandParser parser = new CommandParser();
 		Server server = new Server(8099);
-
+/*
 		ArrayList<Student> students = new ArrayList<>();
 		ArrayList<Course> courses = new ArrayList<>();
 		ArrayList<CourseOffering> offerings = new ArrayList<>();
@@ -67,10 +67,10 @@ public class RegistrationApp {
 		// deleted your tables, uncomment the following lines
 		parser.getDatabase().getStudentDB().populateStudentDatabase(students);
 		parser.getDatabase().getCourseDB().populateCourseDatabase(courses);
-		parser.getDatabase().getOfferingDB().populateOfferingDatabase(offerings);
+		parser.getDatabase().getOfferingDB().populateOfferingDatabase(offerings);*/
 		parser.getDatabase().loadFromDataBase();
 		parser.getCat().readCourseList();
-		parser.getCat().createCourseOfferings(offerings);
+		parser.getCat().createCourseOfferings();
 
 		parser.getDatabase().getCourseList().get(2).addPreReq(parser.getDatabase().getCourseList().get(0));
 		parser.getDatabase().getCourseList().get(4).addPreReq(parser.getDatabase().getCourseList().get(2));

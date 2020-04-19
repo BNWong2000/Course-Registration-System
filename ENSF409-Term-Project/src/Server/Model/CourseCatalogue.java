@@ -14,6 +14,7 @@ import Util.CourseOffering;
  */
 public class CourseCatalogue {
 
+	private ArrayList <CourseOffering> offeringsList;
 	/**
 	 * The list of courses on the catalogue
 	 */
@@ -51,16 +52,17 @@ public class CourseCatalogue {
 	}
 
 
-	public void createCourseOfferings (ArrayList<CourseOffering> offerings) {
+	public void createCourseOfferings () {
+		offeringsList = db.getOfferingList();
 		int j = 0;
 		for (int i = 0; i < courseList.size(); i++,j++){
 			if (courseList.get(i) != null){
-				courseList.get(i).addOffering(offerings.get(j));
+				courseList.get(i).addOffering(offeringsList.get(j));
 			}
 		}
 		for (int i = 0; i < courseList.size(); i++,j++){
 			if (courseList.get(i) != null){
-				courseList.get(i).addOffering(offerings.get(j));
+				courseList.get(i).addOffering(offeringsList.get(j));
 			}
 		}
 	}
