@@ -52,7 +52,7 @@ public class CourseCatalogue {
 
 	/**
 	 * crease a new course offering
-	 * @param c the coourse
+	 * @param c the course
 	 * @param secNum the section number
 	 * @param secCap the max cap of the section.
 	 */
