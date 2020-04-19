@@ -16,7 +16,6 @@ import java.util.ArrayList;
  */
 public class RegistrationApp {
 	public static void main (String [] args) {
-		//RegistrationApp myRegistrationApp = new RegistrationApp();
 		CommandParser parser = new CommandParser();
 		Server server = new Server(8099);
 
@@ -70,17 +69,6 @@ public class RegistrationApp {
 		parser.getDatabase().loadFromDataBase();
 		parser.getCat().readCourseList();
 		parser.getCat().createCourseOfferings();
-
-		parser.getDatabase().getCourseList().get(2).addPreReq(parser.getDatabase().getCourseList().get(0));
-		parser.getDatabase().getCourseList().get(4).addPreReq(parser.getDatabase().getCourseList().get(2));
-		parser.getDatabase().getCourseList().get(4).addPreReq(parser.getDatabase().getCourseList().get(3));
-		parser.getDatabase().getCourseList().get(5).addPreReq(parser.getDatabase().getCourseList().get(2));
-		parser.getDatabase().getCourseList().get(6).addPreReq(parser.getDatabase().getCourseList().get(4));
-
-
-
-		//myRegistrationApp.menu();
-		//communication.communicate();
 
 		server.startServer(parser);
 		
