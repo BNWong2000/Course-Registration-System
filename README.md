@@ -1,5 +1,5 @@
 # Course-Registration-System
-## ENSF 409 Term Project 
+#### ENSF 409 Term Project 
 ##### Branden Wong & Savipal Jessel
 ##### A program which manages students enrolling in courses. 
 How to run our application:
