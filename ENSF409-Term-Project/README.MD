@@ -1,6 +1,5 @@
 # ENSF 409 Term Project 
-##### Branden Wong - 30040675 - branden.wong1@ucalgary.ca
-##### Savipal Jessel - 30039257 - savipal.jessel@ucalgary.ca
+##### Branden Wong & Savipal Jessel
 How to run our application:
 1. Point the classpath to the driver jar. Note that the driver jar is contained 
 in the lib folder within our project directory. Note that this varies from IDE to IDE.
